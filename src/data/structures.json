@@ -1,0 +1,987 @@
+{
+ "bone.frontal_bone": {
+  "name": "Frontal bone",
+  "latin": "Os frontale",
+  "group": "Cranium",
+  "summary": "Forms the forehead, the roofs of the orbits and most of the anterior cranial fossa. Contains the frontal sinuses."
+ },
+ "bone.parietal_bone": {
+  "name": "Parietal bone",
+  "latin": "Os parietale",
+  "group": "Cranium",
+  "summary": "Paired bones forming the sides and roof of the cranial vault; they meet in the midline at the sagittal suture."
+ },
+ "bone.occipital_bone": {
+  "name": "Occipital bone",
+  "latin": "Os occipitale",
+  "group": "Cranium",
+  "summary": "Forms the back and much of the base of the skull. Surrounds the foramen magnum; its occipital condyles articulate with the atlas (C1)."
+ },
+ "bone.temporal_bone": {
+  "name": "Temporal bone",
+  "latin": "Os temporale",
+  "group": "Cranium",
+  "summary": "Houses the middle and inner ear. Bears the mandibular fossa of the temporomandibular joint, and the mastoid, styloid and zygomatic processes."
+ },
+ "bone.sphenoid_bone": {
+  "name": "Sphenoid bone",
+  "latin": "Os sphenoidale",
+  "group": "Cranium",
+  "summary": "Central bone of the skull base. Its sella turcica holds the pituitary gland; its wings and pterygoid processes give passage and attachment to many nerves and muscles."
+ },
+ "bone.ethmoid_bone": {
+  "name": "Ethmoid bone",
+  "latin": "Os ethmoidale",
+  "group": "Cranium",
+  "summary": "Light, air-filled bone between the orbits. Its cribriform plate transmits olfactory nerve fibres; it forms part of the nasal septum and the superior and middle nasal conchae."
+ },
+ "bone.maxilla": {
+  "name": "Maxilla",
+  "latin": "Maxilla",
+  "group": "Facial skeleton",
+  "summary": "The upper jaw. Holds the upper teeth and forms the floor of the orbit, part of the hard palate and the lateral wall of the nasal cavity. Contains the maxillary sinus."
+ },
+ "bone.zygomatic_bone": {
+  "name": "Zygomatic bone",
+  "latin": "Os zygomaticum",
+  "group": "Facial skeleton",
+  "summary": "The cheekbone. Forms the prominence of the cheek and part of the lateral orbital wall; with the temporal bone it forms the zygomatic arch."
+ },
+ "bone.nasal_bone": {
+  "name": "Nasal bone",
+  "latin": "Os nasale",
+  "group": "Facial skeleton",
+  "summary": "Small paired bones forming the bony bridge of the nose."
+ },
+ "bone.lacrimal_bone": {
+  "name": "Lacrimal bone",
+  "latin": "Os lacrimale",
+  "group": "Facial skeleton",
+  "summary": "The smallest facial bone, in the medial wall of the orbit. Helps form the fossa for the lacrimal sac."
+ },
+ "bone.palatine_bone": {
+  "name": "Palatine bone",
+  "latin": "Os palatinum",
+  "group": "Facial skeleton",
+  "summary": "L-shaped bone forming the posterior hard palate and parts of the nasal cavity wall and orbital floor."
+ },
+ "bone.inferior_nasal_concha": {
+  "name": "Inferior nasal concha",
+  "latin": "Concha nasalis inferior",
+  "group": "Facial skeleton",
+  "summary": "A separate scroll-shaped bone on the lateral wall of the nasal cavity. The nasolacrimal duct opens beneath it, into the inferior meatus."
+ },
+ "bone.vomer": {
+  "name": "Vomer",
+  "latin": "Vomer",
+  "group": "Facial skeleton",
+  "summary": "Thin midline bone forming the posteroinferior part of the nasal septum."
+ },
+ "bone.mandible": {
+  "name": "Mandible",
+  "latin": "Mandibula",
+  "group": "Facial skeleton",
+  "summary": "The lower jaw, the only movable bone of the skull. Holds the lower teeth; its condyles form the temporomandibular joints. The mental foramen transmits the mental nerve and vessels."
+ },
+ "bone.hyoid_bone": {
+  "name": "Hyoid bone",
+  "latin": "Os hyoideum",
+  "group": "Neck",
+  "summary": "U-shaped bone that does not articulate with any other bone. Suspended by muscles and ligaments, it anchors the tongue and the supra- and infrahyoid muscles."
+ },
+ "bone.atlas_c1": {
+  "name": "Atlas (C1)",
+  "latin": "Atlas",
+  "group": "Cervical spine",
+  "summary": "First cervical vertebra. Has no body; it carries the skull, and the atlanto-occipital joints allow nodding."
+ },
+ "bone.axis_c2": {
+  "name": "Axis (C2)",
+  "latin": "Axis",
+  "group": "Cervical spine",
+  "summary": "Second cervical vertebra. Its dens (odontoid process) is the pivot around which the atlas and skull rotate."
+ },
+ "bone.major_alar_cartilage": {
+  "name": "Major alar cartilage",
+  "latin": "Cartilago alaris major",
+  "group": "Nasal cartilage",
+  "summary": "Shapes the tip of the nose and the margins of the nostrils."
+ },
+ "bone.lateral_nasal_cartilage": {
+  "name": "Lateral process of septal cartilage",
+  "latin": "Processus lateralis cartilaginis septi nasi",
+  "group": "Nasal cartilage",
+  "summary": "Also called the upper lateral cartilage. Supports the middle third of the external nose, below the nasal bones."
+ },
+ "bone.septal_cartilage": {
+  "name": "Septal nasal cartilage",
+  "latin": "Cartilago septi nasi",
+  "group": "Nasal cartilage",
+  "summary": "Forms the anterior, cartilaginous part of the nasal septum."
+ },
+ "bone.maxillary_teeth": {
+  "name": "Upper (maxillary) teeth",
+  "latin": "Arcus dentalis maxillaris",
+  "group": "Teeth",
+  "summary": "Incisors, canines, premolars and first and second molars of the upper jaw (third molars are not modelled). Sensory supply from the superior alveolar nerves (maxillary nerve, V2)."
+ },
+ "bone.mandibular_teeth": {
+  "name": "Lower (mandibular) teeth",
+  "latin": "Arcus dentalis mandibularis",
+  "group": "Teeth",
+  "summary": "Incisors, canines, premolars and first and second molars of the lower jaw (third molars are not modelled). Sensory supply from the inferior alveolar nerve (V3)."
+ },
+ "muscle.frontalis": {
+  "name": "Frontalis (frontal belly of occipitofrontalis)",
+  "latin": "Venter frontalis musculi occipitofrontalis",
+  "group": "Facial expression",
+  "summary": "Broad muscle of the forehead.",
+  "origin": "Epicranial aponeurosis",
+  "insertion": "Skin of the eyebrows and forehead",
+  "innervation": "Temporal branches of the facial nerve (CN VII)",
+  "action": "Raises the eyebrows and wrinkles the forehead"
+ },
+ "muscle.occipitalis": {
+  "name": "Occipitalis (occipital belly of occipitofrontalis)",
+  "latin": "Venter occipitalis musculi occipitofrontalis",
+  "group": "Facial expression",
+  "summary": "Posterior belly of the scalp muscle.",
+  "origin": "Lateral superior nuchal line and mastoid part of the temporal bone",
+  "insertion": "Epicranial aponeurosis",
+  "innervation": "Posterior auricular branch of the facial nerve (CN VII)",
+  "action": "Draws the scalp backwards"
+ },
+ "muscle.temporoparietalis": {
+  "name": "Temporoparietalis",
+  "latin": "Musculus temporoparietalis",
+  "group": "Facial expression",
+  "summary": "Thin, variable muscle sheet of the scalp above the ear.",
+  "origin": "Fascia above the auricle",
+  "insertion": "Epicranial aponeurosis",
+  "innervation": "Temporal branches of the facial nerve (CN VII)",
+  "action": "Tightens the scalp"
+ },
+ "muscle.epicranial_aponeurosis": {
+  "name": "Epicranial aponeurosis",
+  "latin": "Galea aponeurotica",
+  "group": "Facial expression",
+  "summary": "Tough fibrous sheet covering the vault of the skull. It links the frontal and occipital bellies of occipitofrontalis and is one of the layers of the scalp."
+ },
+ "muscle.procerus": {
+  "name": "Procerus",
+  "latin": "Musculus procerus",
+  "group": "Facial expression",
+  "summary": "Small muscle over the bridge of the nose.",
+  "origin": "Fascia over the nasal bone and upper lateral nasal cartilage",
+  "insertion": "Skin between the eyebrows",
+  "innervation": "Facial nerve (CN VII)",
+  "action": "Pulls the medial eyebrows down, making horizontal wrinkles over the bridge of the nose"
+ },
+ "muscle.corrugator_supercilii": {
+  "name": "Corrugator supercilii",
+  "latin": "Musculus corrugator supercilii",
+  "group": "Facial expression",
+  "summary": "Small muscle deep to the eyebrow.",
+  "origin": "Medial end of the superciliary arch",
+  "insertion": "Skin of the middle of the eyebrow",
+  "innervation": "Temporal branches of the facial nerve (CN VII)",
+  "action": "Draws the eyebrows medially and down (frowning)"
+ },
+ "muscle.orbicularis_oculi_orbital": {
+  "name": "Orbicularis oculi – orbital part",
+  "latin": "Musculus orbicularis oculi, pars orbitalis",
+  "group": "Facial expression",
+  "summary": "Outer ring of the sphincter around the eye.",
+  "origin": "Nasal part of frontal bone, frontal process of maxilla, medial palpebral ligament",
+  "insertion": "Encircles the orbit and returns near its origin",
+  "innervation": "Temporal and zygomatic branches of the facial nerve (CN VII)",
+  "action": "Closes the eyelids tightly (squeezing)"
+ },
+ "muscle.orbicularis_oculi_palpebral": {
+  "name": "Orbicularis oculi – palpebral part",
+  "latin": "Musculus orbicularis oculi, pars palpebralis",
+  "group": "Facial expression",
+  "summary": "Thin inner part of the sphincter, within the eyelids.",
+  "origin": "Medial palpebral ligament",
+  "insertion": "Lateral palpebral raphe",
+  "innervation": "Temporal and zygomatic branches of the facial nerve (CN VII)",
+  "action": "Closes the eyelids gently (blinking)"
+ },
+ "muscle.nasalis": {
+  "name": "Nasalis",
+  "latin": "Musculus nasalis",
+  "group": "Facial expression",
+  "summary": "Muscle of the external nose with transverse and alar parts.",
+  "origin": "Maxilla, above the incisor and canine teeth",
+  "insertion": "Aponeurosis over the nasal dorsum and the alar cartilages",
+  "innervation": "Buccal branches of the facial nerve (CN VII)",
+  "action": "Compresses (transverse part) or flares (alar part) the nostrils"
+ },
+ "muscle.depressor_septi_nasi": {
+  "name": "Depressor septi nasi",
+  "latin": "Musculus depressor septi nasi",
+  "group": "Facial expression",
+  "summary": "Small muscle beneath the upper lip.",
+  "origin": "Maxilla above the central incisor",
+  "insertion": "Mobile part of the nasal septum",
+  "innervation": "Buccal branches of the facial nerve (CN VII)",
+  "action": "Pulls the tip of the nose down"
+ },
+ "muscle.levator_labii_superioris_alaeque_nasi": {
+  "name": "Levator labii superioris alaeque nasi",
+  "latin": "Musculus levator labii superioris alaeque nasi",
+  "group": "Facial expression",
+  "summary": "Labelled \"levator nasolabialis\" in the source model.",
+  "origin": "Frontal process of the maxilla",
+  "insertion": "Alar cartilage and skin of the upper lip",
+  "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
+  "action": "Elevates the upper lip and dilates the nostril"
+ },
+ "muscle.levator_labii_superioris": {
+  "name": "Levator labii superioris",
+  "latin": "Musculus levator labii superioris",
+  "group": "Facial expression",
+  "summary": "Flat muscle of the upper lip.",
+  "origin": "Infra-orbital margin of the maxilla, above the infra-orbital foramen",
+  "insertion": "Skin and muscle of the upper lip",
+  "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
+  "action": "Elevates the upper lip"
+ },
+ "muscle.levator_anguli_oris": {
+  "name": "Levator anguli oris",
+  "latin": "Musculus levator anguli oris",
+  "group": "Facial expression",
+  "summary": "Lies deep to levator labii superioris.",
+  "origin": "Canine fossa of the maxilla, below the infra-orbital foramen",
+  "insertion": "Angle of the mouth (modiolus)",
+  "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
+  "action": "Elevates the angle of the mouth"
+ },
+ "muscle.zygomaticus_major": {
+  "name": "Zygomaticus major",
+  "latin": "Musculus zygomaticus major",
+  "group": "Facial expression",
+  "summary": "The main \"smiling\" muscle.",
+  "origin": "Lateral surface of the zygomatic bone",
+  "insertion": "Angle of the mouth (modiolus)",
+  "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
+  "action": "Draws the angle of the mouth upwards and laterally"
+ },
+ "muscle.zygomaticus_minor": {
+  "name": "Zygomaticus minor",
+  "latin": "Musculus zygomaticus minor",
+  "group": "Facial expression",
+  "summary": "Slender muscle medial to zygomaticus major.",
+  "origin": "Zygomatic bone",
+  "insertion": "Upper lip",
+  "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
+  "action": "Elevates the upper lip"
+ },
+ "muscle.risorius": {
+  "name": "Risorius",
+  "latin": "Musculus risorius",
+  "group": "Facial expression",
+  "summary": "Thin, variable muscle of the cheek.",
+  "origin": "Fascia over the parotid gland and masseter",
+  "insertion": "Angle of the mouth",
+  "innervation": "Buccal branches of the facial nerve (CN VII)",
+  "action": "Pulls the angle of the mouth laterally"
+ },
+ "muscle.buccinator": {
+  "name": "Buccinator",
+  "latin": "Musculus buccinator",
+  "group": "Facial expression",
+  "summary": "Muscle forming the wall of the cheek. The parotid duct pierces it.",
+  "origin": "Alveolar processes of maxilla and mandible opposite the molars; pterygomandibular raphe",
+  "insertion": "Angle of the mouth, blending with orbicularis oris",
+  "innervation": "Buccal branches of the facial nerve (CN VII)",
+  "action": "Presses the cheek against the teeth, keeping food between them; used in blowing"
+ },
+ "muscle.orbicularis_oris": {
+  "name": "Orbicularis oris",
+  "latin": "Musculus orbicularis oris",
+  "group": "Facial expression",
+  "summary": "Sphincter muscle of the lips.",
+  "origin": "Maxilla and mandible near the midline, and fibres from other muscles at the modiolus",
+  "insertion": "Skin and mucous membrane of the lips",
+  "innervation": "Buccal and marginal mandibular branches of the facial nerve (CN VII)",
+  "action": "Closes and protrudes the lips"
+ },
+ "muscle.depressor_anguli_oris": {
+  "name": "Depressor anguli oris",
+  "latin": "Musculus depressor anguli oris",
+  "group": "Facial expression",
+  "summary": "Triangular muscle below the corner of the mouth.",
+  "origin": "Oblique line of the mandible",
+  "insertion": "Angle of the mouth",
+  "innervation": "Marginal mandibular branch of the facial nerve (CN VII)",
+  "action": "Pulls the angle of the mouth down (frowning)"
+ },
+ "muscle.depressor_labii_inferioris": {
+  "name": "Depressor labii inferioris",
+  "latin": "Musculus depressor labii inferioris",
+  "group": "Facial expression",
+  "summary": "Quadrilateral muscle of the lower lip.",
+  "origin": "Oblique line of the mandible, between the symphysis and mental foramen",
+  "insertion": "Skin of the lower lip",
+  "innervation": "Marginal mandibular branch of the facial nerve (CN VII)",
+  "action": "Depresses the lower lip"
+ },
+ "muscle.mentalis": {
+  "name": "Mentalis",
+  "latin": "Musculus mentalis",
+  "group": "Facial expression",
+  "summary": "Small muscle of the chin.",
+  "origin": "Incisive fossa of the mandible",
+  "insertion": "Skin of the chin",
+  "innervation": "Marginal mandibular branch of the facial nerve (CN VII)",
+  "action": "Raises and protrudes the lower lip; wrinkles the chin"
+ },
+ "muscle.platysma": {
+  "name": "Platysma",
+  "latin": "Platysma",
+  "group": "Facial expression",
+  "summary": "Broad, thin sheet in the superficial fascia of the neck.",
+  "origin": "Fascia over the upper pectoralis major and deltoid",
+  "insertion": "Inferior border of the mandible, skin of the lower face and angle of the mouth",
+  "innervation": "Cervical branch of the facial nerve (CN VII)",
+  "action": "Tenses the skin of the neck; helps depress the mandible and corner of the mouth"
+ },
+ "muscle.temporalis": {
+  "name": "Temporalis",
+  "latin": "Musculus temporalis",
+  "group": "Mastication",
+  "summary": "Fan-shaped muscle filling the temporal fossa.",
+  "origin": "Floor of the temporal fossa and deep temporal fascia",
+  "insertion": "Coronoid process and anterior border of the ramus of the mandible",
+  "innervation": "Deep temporal nerves (mandibular nerve, V3)",
+  "action": "Elevates the mandible; posterior fibres retract it"
+ },
+ "muscle.masseter_superficial": {
+  "name": "Masseter – superficial part",
+  "latin": "Musculus masseter, pars superficialis",
+  "group": "Mastication",
+  "summary": "Larger, outer part of the masseter.",
+  "origin": "Zygomatic process of maxilla and anterior two-thirds of the lower border of the zygomatic arch",
+  "insertion": "Angle and lower lateral surface of the ramus of the mandible",
+  "innervation": "Masseteric nerve (mandibular nerve, V3)",
+  "action": "Elevates the mandible (closes the jaw)"
+ },
+ "muscle.masseter_deep": {
+  "name": "Masseter – deep part",
+  "latin": "Musculus masseter, pars profunda",
+  "group": "Mastication",
+  "summary": "Smaller, deeper part of the masseter.",
+  "origin": "Posterior third and deep surface of the zygomatic arch",
+  "insertion": "Upper lateral surface of the ramus and coronoid process",
+  "innervation": "Masseteric nerve (mandibular nerve, V3)",
+  "action": "Elevates and helps retract the mandible"
+ },
+ "muscle.medial_pterygoid": {
+  "name": "Medial pterygoid",
+  "latin": "Musculus pterygoideus medialis",
+  "group": "Mastication",
+  "summary": "Quadrangular muscle on the inner side of the ramus, mirroring the masseter.",
+  "origin": "Medial surface of the lateral pterygoid plate; maxillary tuberosity",
+  "insertion": "Medial surface of the ramus near the angle of the mandible",
+  "innervation": "Nerve to medial pterygoid (mandibular nerve, V3)",
+  "action": "Elevates and protrudes the mandible; side-to-side grinding"
+ },
+ "muscle.lateral_pterygoid_superior": {
+  "name": "Lateral pterygoid – superior head",
+  "latin": "Musculus pterygoideus lateralis, caput superius",
+  "group": "Mastication",
+  "summary": "Upper head of the lateral pterygoid.",
+  "origin": "Infratemporal surface of the greater wing of the sphenoid",
+  "insertion": "Capsule and articular disc of the temporomandibular joint, and neck of the mandible",
+  "innervation": "Nerve to lateral pterygoid (mandibular nerve, V3)",
+  "action": "Stabilises the disc and condyle, especially during closing"
+ },
+ "muscle.lateral_pterygoid_inferior": {
+  "name": "Lateral pterygoid – inferior head",
+  "latin": "Musculus pterygoideus lateralis, caput inferius",
+  "group": "Mastication",
+  "summary": "Lower head of the lateral pterygoid.",
+  "origin": "Lateral surface of the lateral pterygoid plate",
+  "insertion": "Pterygoid fovea on the neck of the mandible",
+  "innervation": "Nerve to lateral pterygoid (mandibular nerve, V3)",
+  "action": "Protrudes the mandible and opens the jaw; side-to-side movement"
+ },
+ "muscle.sternocleidomastoid": {
+  "name": "Sternocleidomastoid",
+  "latin": "Musculus sternocleidomastoideus",
+  "group": "Neck",
+  "summary": "Key landmark dividing the neck into anterior and posterior triangles.",
+  "origin": "Manubrium of sternum (sternal head) and medial third of clavicle (clavicular head)",
+  "insertion": "Mastoid process and lateral half of the superior nuchal line",
+  "innervation": "Accessory nerve (CN XI)",
+  "action": "One side: tilts the head to the same side and turns the face to the opposite side. Both sides: flex the neck"
+ },
+ "muscle.digastric_anterior": {
+  "name": "Digastric – anterior belly",
+  "latin": "Musculus digastricus, venter anterior",
+  "group": "Neck",
+  "summary": "Suprahyoid muscle beneath the chin.",
+  "origin": "Digastric fossa of the mandible",
+  "insertion": "Intermediate tendon, attached to the hyoid bone",
+  "innervation": "Nerve to mylohyoid (mandibular nerve, V3)",
+  "action": "Depresses the mandible; elevates the hyoid"
+ },
+ "muscle.digastric_posterior": {
+  "name": "Digastric – posterior belly",
+  "latin": "Musculus digastricus, venter posterior",
+  "group": "Neck",
+  "summary": "Suprahyoid muscle running from the mastoid region to the hyoid.",
+  "origin": "Mastoid notch of the temporal bone",
+  "insertion": "Intermediate tendon, attached to the hyoid bone",
+  "innervation": "Facial nerve (CN VII)",
+  "action": "Elevates and retracts the hyoid; assists jaw opening"
+ },
+ "muscle.mylohyoid": {
+  "name": "Mylohyoid",
+  "latin": "Musculus mylohyoideus",
+  "group": "Neck",
+  "summary": "Forms the muscular floor of the mouth.",
+  "origin": "Mylohyoid line of the mandible",
+  "insertion": "Midline raphe and body of the hyoid bone",
+  "innervation": "Nerve to mylohyoid (mandibular nerve, V3)",
+  "action": "Elevates the hyoid and floor of the mouth (swallowing, speaking)"
+ },
+ "muscle.stylohyoid": {
+  "name": "Stylohyoid",
+  "latin": "Musculus stylohyoideus",
+  "group": "Neck",
+  "summary": "Slender suprahyoid muscle; its tendon splits around the digastric tendon.",
+  "origin": "Styloid process of the temporal bone",
+  "insertion": "Body of the hyoid bone",
+  "innervation": "Facial nerve (CN VII)",
+  "action": "Elevates and retracts the hyoid"
+ },
+ "muscle.levator_palpebrae_superioris": {
+  "name": "Levator palpebrae superioris",
+  "latin": "Musculus levator palpebrae superioris",
+  "group": "Extra-ocular",
+  "summary": "Muscle of the upper eyelid.",
+  "origin": "Lesser wing of the sphenoid, above the optic canal",
+  "insertion": "Skin and tarsal plate of the upper eyelid",
+  "innervation": "Oculomotor nerve (CN III); its smooth-muscle part (superior tarsal) is sympathetic",
+  "action": "Raises the upper eyelid"
+ },
+ "muscle.superior_rectus": {
+  "name": "Superior rectus",
+  "latin": "Musculus rectus superior",
+  "group": "Extra-ocular",
+  "summary": "One of the four rectus muscles of the eye.",
+  "origin": "Common tendinous ring",
+  "insertion": "Superior sclera, in front of the equator",
+  "innervation": "Oculomotor nerve (CN III)",
+  "action": "Elevates the eye; also adducts and intorts it"
+ },
+ "muscle.inferior_rectus": {
+  "name": "Inferior rectus",
+  "latin": "Musculus rectus inferior",
+  "group": "Extra-ocular",
+  "summary": "One of the four rectus muscles of the eye.",
+  "origin": "Common tendinous ring",
+  "insertion": "Inferior sclera, in front of the equator",
+  "innervation": "Oculomotor nerve (CN III)",
+  "action": "Depresses the eye; also adducts and extorts it"
+ },
+ "muscle.medial_rectus": {
+  "name": "Medial rectus",
+  "latin": "Musculus rectus medialis",
+  "group": "Extra-ocular",
+  "summary": "Largest of the rectus muscles.",
+  "origin": "Common tendinous ring",
+  "insertion": "Medial sclera",
+  "innervation": "Oculomotor nerve (CN III)",
+  "action": "Adducts the eye"
+ },
+ "muscle.lateral_rectus": {
+  "name": "Lateral rectus",
+  "latin": "Musculus rectus lateralis",
+  "group": "Extra-ocular",
+  "summary": "One of the four rectus muscles of the eye.",
+  "origin": "Common tendinous ring",
+  "insertion": "Lateral sclera",
+  "innervation": "Abducens nerve (CN VI)",
+  "action": "Abducts the eye"
+ },
+ "muscle.superior_oblique": {
+  "name": "Superior oblique",
+  "latin": "Musculus obliquus superior",
+  "group": "Extra-ocular",
+  "summary": "Its tendon runs through a pulley (the trochlea) before turning back to the eye.",
+  "origin": "Body of the sphenoid, above and medial to the optic canal",
+  "insertion": "Posterosuperolateral sclera, via the trochlea",
+  "innervation": "Trochlear nerve (CN IV)",
+  "action": "Intorts, depresses and abducts the eye (depression is greatest when the eye is adducted)"
+ },
+ "muscle.inferior_oblique": {
+  "name": "Inferior oblique",
+  "latin": "Musculus obliquus inferior",
+  "group": "Extra-ocular",
+  "summary": "The only extra-ocular muscle arising from the front of the orbit.",
+  "origin": "Orbital surface of the maxilla, in the floor of the orbit",
+  "insertion": "Posteroinferolateral sclera",
+  "innervation": "Oculomotor nerve (CN III)",
+  "action": "Extorts, elevates and abducts the eye (elevation is greatest when the eye is adducted)"
+ },
+ "nerve.facial_nerve": {
+  "name": "Facial nerve (CN VII)",
+  "latin": "Nervus facialis",
+  "group": "Cranial nerve",
+  "summary": "Leaves the skull at the stylomastoid foramen, passes through the parotid gland and fans out into temporal, zygomatic, buccal, marginal mandibular and cervical branches to the muscles of facial expression. Also carries taste from the anterior two-thirds of the tongue and secretomotor fibres to the lacrimal, submandibular and sublingual glands.",
+  "fibres": "Motor, sensory (taste), parasympathetic"
+ },
+ "nerve.chorda_tympani": {
+  "name": "Chorda tympani",
+  "latin": "Chorda tympani",
+  "group": "Branch of CN VII",
+  "summary": "Crosses the middle ear next to the eardrum and joins the lingual nerve. Carries taste from the anterior two-thirds of the tongue and secretomotor fibres to the submandibular and sublingual glands.",
+  "fibres": "Sensory (taste), parasympathetic"
+ },
+ "nerve.trigeminal_nerve": {
+  "name": "Trigeminal nerve (CN V)",
+  "latin": "Nervus trigeminus",
+  "group": "Cranial nerve",
+  "summary": "The main sensory nerve of the face, and motor to the muscles of mastication. Divides at the trigeminal ganglion into ophthalmic (V1), maxillary (V2) and mandibular (V3) nerves.",
+  "fibres": "Sensory and motor"
+ },
+ "nerve.trigeminal_sensory_root": {
+  "name": "Sensory root of trigeminal nerve",
+  "latin": "Radix sensoria nervi trigemini",
+  "group": "Trigeminal nerve",
+  "summary": "Large root carrying sensation from the face to the pons.",
+  "fibres": "Sensory"
+ },
+ "nerve.trigeminal_motor_root": {
+  "name": "Motor root of trigeminal nerve",
+  "latin": "Radix motoria nervi trigemini",
+  "group": "Trigeminal nerve",
+  "summary": "Small root that joins the mandibular nerve to supply the muscles of mastication.",
+  "fibres": "Motor"
+ },
+ "nerve.ophthalmic_nerve": {
+  "name": "Ophthalmic nerve (V1)",
+  "latin": "Nervus ophthalmicus",
+  "group": "Trigeminal nerve",
+  "summary": "Enters the orbit through the superior orbital fissure as the frontal, lacrimal and nasociliary nerves. Supplies the forehead, upper eyelid, cornea and dorsum of the nose.",
+  "fibres": "Sensory"
+ },
+ "nerve.maxillary_nerve": {
+  "name": "Maxillary nerve (V2)",
+  "latin": "Nervus maxillaris",
+  "group": "Trigeminal nerve",
+  "summary": "Leaves the skull through the foramen rotundum and continues as the infra-orbital nerve. Supplies the lower eyelid, cheek, upper lip, upper teeth, palate and nasal cavity.",
+  "fibres": "Sensory"
+ },
+ "nerve.mandibular_nerve_anterior": {
+  "name": "Mandibular nerve (V3) – anterior division",
+  "latin": "Nervus mandibularis",
+  "group": "Trigeminal nerve",
+  "summary": "Mainly motor: masseteric, deep temporal and lateral pterygoid nerves. Its one sensory branch is the buccal nerve.",
+  "fibres": "Mainly motor"
+ },
+ "nerve.mandibular_nerve_posterior": {
+  "name": "Mandibular nerve (V3) – posterior division",
+  "latin": "Nervus mandibularis",
+  "group": "Trigeminal nerve",
+  "summary": "Mainly sensory: auriculotemporal, lingual and inferior alveolar nerves. Its motor branch is the nerve to mylohyoid.",
+  "fibres": "Mainly sensory"
+ },
+ "nerve.buccal_nerve": {
+  "name": "Buccal nerve",
+  "latin": "Nervus buccalis",
+  "group": "Mandibular nerve (V3)",
+  "summary": "Sensory to the skin and mucous membrane of the cheek. It does not supply the buccinator muscle, which is supplied by the facial nerve.",
+  "fibres": "Sensory"
+ },
+ "nerve.lingual_nerve": {
+  "name": "Lingual nerve",
+  "latin": "Nervus lingualis",
+  "group": "Mandibular nerve (V3)",
+  "summary": "General sensation from the anterior two-thirds of the tongue, floor of the mouth and lingual gums. Carries chorda tympani fibres.",
+  "fibres": "Sensory (+ chorda tympani fibres)"
+ },
+ "nerve.inferior_alveolar_nerve": {
+  "name": "Inferior alveolar nerve",
+  "latin": "Nervus alveolaris inferior",
+  "group": "Mandibular nerve (V3)",
+  "summary": "Enters the mandibular foramen and runs in the mandibular canal to supply the lower teeth. Anaesthetised in the dental \"inferior alveolar nerve block\".",
+  "fibres": "Sensory (gives off the motor nerve to mylohyoid)"
+ },
+ "nerve.mental_nerve": {
+  "name": "Mental nerve",
+  "latin": "Nervus mentalis",
+  "group": "Mandibular nerve (V3)",
+  "summary": "Terminal branch of the inferior alveolar nerve; emerges from the mental foramen to supply the skin of the chin and the lower lip.",
+  "fibres": "Sensory"
+ },
+ "nerve.nerve_to_mylohyoid": {
+  "name": "Nerve to mylohyoid",
+  "latin": "Nervus mylohyoideus",
+  "group": "Mandibular nerve (V3)",
+  "summary": "Branch of the inferior alveolar nerve supplying mylohyoid and the anterior belly of digastric.",
+  "fibres": "Motor"
+ },
+ "nerve.optic_nerve": {
+  "name": "Optic nerve (CN II)",
+  "latin": "Nervus opticus",
+  "group": "Cranial nerve",
+  "summary": "Carries visual information from the retina through the optic canal to the optic chiasm.",
+  "fibres": "Special sensory (vision)"
+ },
+ "nerve.oculomotor_nerve": {
+  "name": "Oculomotor nerve (CN III)",
+  "latin": "Nervus oculomotorius",
+  "group": "Cranial nerve",
+  "summary": "Supplies the superior, inferior and medial recti, inferior oblique and levator palpebrae superioris; its parasympathetic fibres constrict the pupil and focus the lens.",
+  "fibres": "Motor, parasympathetic"
+ },
+ "nerve.trochlear_nerve": {
+  "name": "Trochlear nerve (CN IV)",
+  "latin": "Nervus trochlearis",
+  "group": "Cranial nerve",
+  "summary": "Supplies the superior oblique muscle. The only cranial nerve to leave the back of the brainstem.",
+  "fibres": "Motor"
+ },
+ "nerve.abducens_nerve": {
+  "name": "Abducens nerve (CN VI)",
+  "latin": "Nervus abducens",
+  "group": "Cranial nerve",
+  "summary": "Supplies the lateral rectus muscle, which turns the eye outwards.",
+  "fibres": "Motor"
+ },
+ "nerve.hypoglossal_nerve": {
+  "name": "Hypoglossal nerve (CN XII)",
+  "latin": "Nervus hypoglossus",
+  "group": "Cranial nerve",
+  "summary": "Motor to the intrinsic and most extrinsic muscles of the tongue (all except palatoglossus).",
+  "fibres": "Motor"
+ },
+ "vessel.external_carotid_artery": {
+  "name": "External carotid artery",
+  "latin": "Arteria carotis externa",
+  "group": "Artery",
+  "summary": "Branch of the common carotid artery that supplies the face, scalp and neck. It ends in the parotid gland by dividing into the maxillary and superficial temporal arteries."
+ },
+ "vessel.internal_carotid_artery": {
+  "name": "Internal carotid artery",
+  "latin": "Arteria carotis interna",
+  "group": "Artery",
+  "summary": "Gives no branches in the neck. Enters the skull through the carotid canal to supply the brain, and the orbit via the ophthalmic artery."
+ },
+ "vessel.facial_artery": {
+  "name": "Facial artery",
+  "latin": "Arteria facialis",
+  "group": "Artery",
+  "summary": "Branch of the external carotid. Hooks over the mandible at the front of the masseter (where its pulse can be felt) and winds towards the medial corner of the eye."
+ },
+ "vessel.angular_artery": {
+  "name": "Angular artery",
+  "latin": "Arteria angularis",
+  "group": "Artery",
+  "summary": "Terminal part of the facial artery beside the nose; anastomoses with branches of the ophthalmic artery."
+ },
+ "vessel.superior_labial_artery": {
+  "name": "Superior labial artery",
+  "latin": "Arteria labialis superior",
+  "group": "Artery",
+  "summary": "Branch of the facial artery to the upper lip; joins its partner from the other side and sends branches to the nasal septum."
+ },
+ "vessel.inferior_labial_artery": {
+  "name": "Inferior labial artery",
+  "latin": "Arteria labialis inferior",
+  "group": "Artery",
+  "summary": "Branch of the facial artery to the lower lip."
+ },
+ "vessel.submental_artery": {
+  "name": "Submental artery",
+  "latin": "Arteria submentalis",
+  "group": "Artery",
+  "summary": "Branch of the facial artery running below the mandible to the chin and floor of the mouth."
+ },
+ "vessel.superficial_temporal_artery": {
+  "name": "Superficial temporal artery",
+  "latin": "Arteria temporalis superficialis",
+  "group": "Artery",
+  "summary": "Terminal branch of the external carotid. Ascends in front of the ear, where its pulse can be felt, and supplies much of the scalp."
+ },
+ "vessel.superficial_temporal_artery_frontal_branch": {
+  "name": "Frontal branch of superficial temporal artery",
+  "latin": "Ramus frontalis arteriae temporalis superficialis",
+  "group": "Artery",
+  "summary": "Supplies the scalp of the forehead; anastomoses with the supra-orbital and supratrochlear arteries."
+ },
+ "vessel.transverse_facial_artery": {
+  "name": "Transverse facial artery",
+  "latin": "Arteria transversa faciei",
+  "group": "Artery",
+  "summary": "Branch of the superficial temporal artery running across the face below the zygomatic arch, with the parotid duct."
+ },
+ "vessel.maxillary_artery": {
+  "name": "Maxillary artery",
+  "latin": "Arteria maxillaris",
+  "group": "Artery",
+  "summary": "Larger terminal branch of the external carotid. Passes behind the neck of the mandible to supply the jaws, teeth, muscles of mastication, nasal cavity, palate and dura (via the middle meningeal artery)."
+ },
+ "vessel.inferior_alveolar_artery": {
+  "name": "Inferior alveolar artery",
+  "latin": "Arteria alveolaris inferior",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery that runs with the inferior alveolar nerve in the mandibular canal to supply the lower teeth."
+ },
+ "vessel.infraorbital_artery": {
+  "name": "Infra-orbital artery",
+  "latin": "Arteria infraorbitalis",
+  "group": "Artery",
+  "summary": "Continuation of the maxillary artery through the floor of the orbit, emerging at the infra-orbital foramen."
+ },
+ "vessel.occipital_artery": {
+  "name": "Occipital artery",
+  "latin": "Arteria occipitalis",
+  "group": "Artery",
+  "summary": "Branch of the external carotid supplying the back of the scalp."
+ },
+ "vessel.ophthalmic_artery": {
+  "name": "Ophthalmic artery",
+  "latin": "Arteria ophthalmica",
+  "group": "Artery",
+  "summary": "First branch of the internal carotid inside the skull; enters the orbit through the optic canal and supplies the eye (including the retina) and orbit."
+ },
+ "vessel.supraorbital_artery": {
+  "name": "Supra-orbital artery",
+  "latin": "Arteria supraorbitalis",
+  "group": "Artery",
+  "summary": "Branch of the ophthalmic artery to the forehead and scalp."
+ },
+ "vessel.supratrochlear_artery": {
+  "name": "Supratrochlear artery",
+  "latin": "Arteria supratrochlearis",
+  "group": "Artery",
+  "summary": "Terminal branch of the ophthalmic artery supplying the medial forehead."
+ },
+ "vessel.facial_vein": {
+  "name": "Facial vein",
+  "latin": "Vena facialis",
+  "group": "Vein",
+  "summary": "Main vein of the face, running behind the facial artery. Connects with the cavernous sinus through the ophthalmic veins, which is why infections around the nose and upper lip (\"danger triangle\") are taken seriously."
+ },
+ "vessel.angular_vein": {
+  "name": "Angular vein",
+  "latin": "Vena angularis",
+  "group": "Vein",
+  "summary": "Formed at the medial corner of the eye by the supratrochlear and supra-orbital veins; continues as the facial vein and communicates with the superior ophthalmic vein."
+ },
+ "vessel.superior_labial_vein": {
+  "name": "Superior labial vein",
+  "latin": "Vena labialis superior",
+  "group": "Vein",
+  "summary": "Drains the upper lip into the facial vein."
+ },
+ "vessel.inferior_labial_veins": {
+  "name": "Inferior labial veins",
+  "latin": "Venae labiales inferiores",
+  "group": "Vein",
+  "summary": "Drain the lower lip into the facial vein."
+ },
+ "vessel.submental_vein": {
+  "name": "Submental vein",
+  "latin": "Vena submentalis",
+  "group": "Vein",
+  "summary": "Drains the chin and floor of the mouth into the facial vein."
+ },
+ "vessel.common_facial_vein": {
+  "name": "Common facial vein",
+  "latin": "Vena facialis communis",
+  "group": "Vein",
+  "summary": "Short trunk formed by the facial vein and the anterior division of the retromandibular vein; drains into the internal jugular vein."
+ },
+ "vessel.retromandibular_vein": {
+  "name": "Retromandibular vein",
+  "latin": "Vena retromandibularis",
+  "group": "Vein",
+  "summary": "Formed in the parotid gland by the superficial temporal and maxillary veins. Divides into an anterior division (to the common facial vein) and a posterior division (to the external jugular vein)."
+ },
+ "vessel.superficial_temporal_veins": {
+  "name": "Superficial temporal veins",
+  "latin": "Venae temporales superficiales",
+  "group": "Vein",
+  "summary": "Drain the side of the scalp and join the maxillary vein to form the retromandibular vein."
+ },
+ "vessel.internal_jugular_vein": {
+  "name": "Internal jugular vein",
+  "latin": "Vena jugularis interna",
+  "group": "Vein",
+  "summary": "Begins at the jugular foramen and runs in the carotid sheath. Drains the brain, face and neck, then joins the subclavian vein to form the brachiocephalic vein."
+ },
+ "vessel.external_jugular_vein": {
+  "name": "External jugular vein",
+  "latin": "Vena jugularis externa",
+  "group": "Vein",
+  "summary": "Formed near the angle of the mandible by the posterior auricular vein and the posterior division of the retromandibular vein; crosses sternocleidomastoid superficially to reach the subclavian vein."
+ },
+ "vessel.posterior_auricular_vein": {
+  "name": "Posterior auricular vein",
+  "latin": "Vena auricularis posterior",
+  "group": "Vein",
+  "summary": "Drains the scalp behind the ear; helps form the external jugular vein."
+ },
+ "organ.eyeball": {
+  "name": "Eyeball",
+  "latin": "Bulbus oculi",
+  "group": "Eye",
+  "summary": "The globe of the eye. This model shows its outer coats: the white sclera, the transparent cornea and the iris."
+ },
+ "organ.lacrimal_gland": {
+  "name": "Lacrimal gland",
+  "latin": "Glandula lacrimalis",
+  "group": "Gland",
+  "summary": "Produces tears; sits in the upper outer part of the orbit. Its secretomotor supply comes from the facial nerve via the pterygopalatine ganglion."
+ },
+ "organ.parotid_gland": {
+  "name": "Parotid gland",
+  "latin": "Glandula parotidea",
+  "group": "Gland",
+  "summary": "The largest salivary gland, in front of and below the ear (model includes the accessory parotid). The facial nerve passes through it but does not supply it; its secretomotor fibres come from the glossopharyngeal nerve."
+ },
+ "organ.parotid_duct": {
+  "name": "Parotid duct",
+  "latin": "Ductus parotideus",
+  "group": "Gland",
+  "summary": "Also called Stensen's duct. Crosses the masseter, pierces buccinator and opens into the mouth opposite the upper second molar."
+ },
+ "organ.submandibular_gland": {
+  "name": "Submandibular gland",
+  "latin": "Glandula submandibularis",
+  "group": "Gland",
+  "summary": "Salivary gland under the body of the mandible. Its duct opens beside the frenulum of the tongue; secretomotor supply via the chorda tympani and submandibular ganglion."
+ },
+ "skin.frontal_region": {
+  "name": "Frontal region",
+  "latin": "Regio frontalis",
+  "group": "Surface region",
+  "summary": "Skin of the forehead, over the frontal bone (model includes the eyebrow)."
+ },
+ "skin.parietal_region": {
+  "name": "Parietal region",
+  "latin": "Regio parietalis",
+  "group": "Surface region",
+  "summary": "Skin of the top of the head, over the parietal bone."
+ },
+ "skin.occipital_region": {
+  "name": "Occipital region",
+  "latin": "Regio occipitalis",
+  "group": "Surface region",
+  "summary": "Skin at the back of the head, over the occipital bone."
+ },
+ "skin.temporal_region": {
+  "name": "Temporal region",
+  "latin": "Regio temporalis",
+  "group": "Surface region",
+  "summary": "Skin of the temple, over the temporalis muscle."
+ },
+ "skin.mastoid_region": {
+  "name": "Mastoid region",
+  "latin": "Regio mastoidea",
+  "group": "Surface region",
+  "summary": "Skin behind the ear, over the mastoid process."
+ },
+ "skin.orbital_region": {
+  "name": "Orbital region",
+  "latin": "Regio orbitalis",
+  "group": "Surface region",
+  "summary": "Skin around the eye, including the eyelids."
+ },
+ "skin.infraorbital_region": {
+  "name": "Infra-orbital region",
+  "latin": "Regio infraorbitalis",
+  "group": "Surface region",
+  "summary": "Skin below the eye, over the infra-orbital foramen."
+ },
+ "skin.nasal_region": {
+  "name": "Nasal region",
+  "latin": "Regio nasalis",
+  "group": "Surface region",
+  "summary": "Skin of the external nose."
+ },
+ "skin.zygomatic_region": {
+  "name": "Zygomatic region",
+  "latin": "Regio zygomatica",
+  "group": "Surface region",
+  "summary": "Skin over the cheekbone."
+ },
+ "skin.buccal_region": {
+  "name": "Buccal region",
+  "latin": "Regio buccalis",
+  "group": "Surface region",
+  "summary": "Skin of the cheek (model includes the nasolabial fold)."
+ },
+ "skin.parotideomasseteric_region": {
+  "name": "Parotid-masseteric region",
+  "latin": "Regio parotideomasseterica",
+  "group": "Surface region",
+  "summary": "Skin over the parotid gland and masseter muscle."
+ },
+ "skin.oral_region": {
+  "name": "Oral region",
+  "latin": "Regio oralis",
+  "group": "Surface region",
+  "summary": "Skin and red margin of the lips around the mouth (includes the philtrum and labial commissure)."
+ },
+ "skin.mental_region": {
+  "name": "Mental region",
+  "latin": "Regio mentalis",
+  "group": "Surface region",
+  "summary": "Skin of the chin."
+ },
+ "skin.auricle": {
+  "name": "Auricle (external ear)",
+  "latin": "Auricula",
+  "group": "Surface region",
+  "summary": "The visible ear: a cartilage framework covered by skin, including helix, antihelix, tragus, concha and lobule."
+ },
+ "skin.submandibular_triangle": {
+  "name": "Submandibular triangle",
+  "latin": "Trigonum submandibulare",
+  "group": "Surface region",
+  "summary": "Area between the mandible and the two bellies of digastric; contains the submandibular gland."
+ },
+ "skin.submental_triangle": {
+  "name": "Submental triangle",
+  "latin": "Trigonum submentale",
+  "group": "Surface region",
+  "summary": "Area under the chin between the anterior bellies of digastric and the hyoid."
+ },
+ "skin.carotid_triangle": {
+  "name": "Carotid triangle",
+  "latin": "Trigonum caroticum",
+  "group": "Surface region",
+  "summary": "Area of the neck where the carotid pulse can be felt; bounded by sternocleidomastoid, posterior digastric and superior omohyoid."
+ },
+ "skin.muscular_triangle": {
+  "name": "Muscular triangle",
+  "latin": "Trigonum musculare",
+  "group": "Surface region",
+  "summary": "Lower front area of the neck, over the infrahyoid (\"strap\") muscles."
+ },
+ "skin.sternocleidomastoid_region": {
+  "name": "Sternocleidomastoid region",
+  "latin": "Regio sternocleidomastoidea",
+  "group": "Surface region",
+  "summary": "Skin over the sternocleidomastoid muscle."
+ },
+ "skin.lateral_region_of_neck": {
+  "name": "Lateral region of neck",
+  "latin": "Regio cervicalis lateralis",
+  "group": "Surface region",
+  "summary": "Also called the posterior triangle of the neck, behind sternocleidomastoid."
+ },
+ "skin.posterior_region_of_neck": {
+  "name": "Posterior region of neck",
+  "latin": "Regio cervicalis posterior",
+  "group": "Surface region",
+  "summary": "Skin of the back of the neck (nuchal region)."
+ }
+}
