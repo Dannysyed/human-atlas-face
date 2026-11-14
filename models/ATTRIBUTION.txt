@@ -1,0 +1,13 @@
+head.glb — Human Atlas 3D head & face prototype model
+
+Derived from the Z-Anatomy 3D models (https://www.z-anatomy.com/, FBX files from
+https://github.com/LluisV/Z-Anatomy, Resources/Models/FBX), which are themselves based on
+BodyParts3D (c) The Database Center for Life Science (DBCLS).
+
+Licence: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Changes made: selected head/neck structures only; world transforms applied; skin regions
+subdivided; meshes decimated; left/right parts kept separate; some parts merged (teeth, eyeball
+coats, auricle sub-regions); stable anatomical IDs stored in glTF node extras; Draco compression.
+This derived model is shared under the same licence (CC BY-SA 4.0).
