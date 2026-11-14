@@ -4,9 +4,14 @@ import Viewer from './Viewer'
 import { useAtlas, type MeshInfo, type ViewName } from './store'
 import { LAYERS, LAYER_BY_ID, colorFor } from './layers'
 import content from './data/structures.json'
+import { EXPRESSIONS, EXPRESSION_BY_ID } from './expressions'
 
-interface Entry { name: string; latin: string; group: string; summary: string; origin?: string; insertion?: string; innervation?: string; action?: string; fibres?: string }
+interface Entry { name: string; latin: string; group: string; summary: string; origin?: string; insertion?: string; innervation?: string; action?: string; fibres?: string; supplies?: string; blood?: string; nerveSupply?: string; clinical?: string }
 const CONTENT = content as Record<string, Entry>
+const BRANCH_ORDER = ['nerve.facial_nerve', 'nerve.facial_temporal_branches', 'nerve.facial_zygomatic_branches', 'nerve.facial_buccal_branches', 'nerve.facial_marginal_mandibular_branch', 'nerve.facial_cervical_branch', 'nerve.chorda_tympani']
+const shortBranch = (sid: string) => ({ 'nerve.facial_nerve': 'Root & trunk', 'nerve.facial_temporal_branches': 'Temporal', 'nerve.facial_zygomatic_branches': 'Zygomatic', 'nerve.facial_buccal_branches': 'Buccal', 'nerve.facial_marginal_mandibular_branch': 'Marginal mandibular', 'nerve.facial_cervical_branch': 'Cervical', 'nerve.chorda_tympani': 'Chorda tympani' } as Record<string, string>)[sid] ?? sid
+// muscles that have Z-Anatomy origin/insertion marker meshes in the model
+const MARKER_MUSCLES = new Set(['digastric_anterior', 'buccinator', 'depressor_anguli_oris', 'depressor_labii_inferioris', 'depressor_septi_nasi', 'frontalis', 'geniohyoid', 'lateral_pterygoid_superior', 'lateral_pterygoid_inferior', 'levator_anguli_oris', 'levator_labii_superioris', 'levator_labii_superioris_alaeque_nasi', 'masseter_superficial', 'masseter_deep', 'medial_pterygoid', 'mentalis', 'mylohyoid', 'nasalis', 'occipitalis', 'orbicularis_oris', 'orbicularis_oculi_orbital', 'procerus', 'sternocleidomastoid', 'temporalis', 'zygomaticus_major', 'zygomaticus_minor'].map((x) => 'muscle.' + x))
 const sideLabel = (s: MeshInfo['side']) => (s === 'left' ? 'Left' : s === 'right' ? 'Right' : '')
 const displayName = (m: MeshInfo) => `${CONTENT[m.structureId]?.name ?? m.structureId}${m.side !== 'midline' ? ` (${sideLabel(m.side).toLowerCase()})` : ''}`
 
@@ -65,10 +70,68 @@ function LayerPanel({ onClose }: { onClose?: () => void }) {
           </div>
         )
       })}
+      <SceneControls />
       <div className="mt-2 flex gap-2">
         <button onClick={showAll} disabled={!nHidden && !isolated} className="flex-1 rounded-lg bg-white/5 px-2 py-1.5 text-xs text-slate-200 hover:bg-white/10 disabled:opacity-40">{isolated ? 'Exit isolate' : `Show hidden${nHidden ? ` (${nHidden})` : ''}`}</button>
         <button onClick={reset} className="flex-1 rounded-lg bg-white/5 px-2 py-1.5 text-xs text-slate-200 hover:bg-white/10">Reset all</button>
       </div>
+    </div>
+  )
+}
+
+function SceneControls() {
+  const explode = useAtlas((s) => s.explode)
+  const autoRotate = useAtlas((s) => s.autoRotate)
+  const quality = useAtlas((s) => s.quality)
+  const { setExplode, setAutoRotate, setQuality } = useAtlas.getState()
+  return (
+    <div className="mt-2 rounded-xl bg-white/[0.03] px-2 py-2">
+      <div className="flex items-center gap-2">
+        <span className="flex-1 text-sm text-slate-100">Explode</span>
+        <span className="w-8 text-right text-[11px] text-slate-400 tabular-nums">{Math.round(explode * 100)}%</span>
+      </div>
+      <input type="range" min={0} max={100} value={Math.round(explode * 100)} onChange={(e) => setExplode(Number(e.target.value) / 100)} className="mt-1.5 h-1 w-full" aria-label="Explode" data-explode />
+      <div className="mt-2 flex gap-1.5">
+        <button onClick={() => setAutoRotate(!autoRotate)} data-autorotate className={`flex-1 rounded-lg px-2 py-1 text-[11px] ${autoRotate ? 'bg-sky-400/20 text-sky-100' : 'bg-white/5 text-slate-300'}`}>{autoRotate ? '⟳ Auto-rotate on' : '⟳ Auto-rotate off'}</button>
+        <button onClick={() => setQuality(quality === 'high' ? 'lite' : 'high')} data-quality className="flex-1 rounded-lg bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10" title="High: full meshes, ambient occlusion, outlines. Lite: lighter meshes for phones.">Quality: {quality === 'high' ? 'High' : 'Lite'}</button>
+      </div>
+    </div>
+  )
+}
+
+function ExpressionBar() {
+  const active = useAtlas((s) => s.expression)
+  const { setExpression } = useAtlas.getState()
+  return (
+    <div className="glass scroll-thin flex max-w-[calc(100vw-24px)] gap-1 overflow-x-auto rounded-xl p-1">
+      <span className="hidden shrink-0 self-center px-2 text-[10px] tracking-widest text-slate-500 uppercase sm:block">Expressions</span>
+      {EXPRESSIONS.map((e) => (
+        <button key={e.id} data-expr={e.id} onClick={() => setExpression(active === e.id ? null : e.id)} className={`shrink-0 rounded-lg px-2 py-1 text-xs whitespace-nowrap ${active === e.id ? 'bg-sky-400/25 text-white' : 'text-slate-300 hover:bg-white/10'}`}>
+          <span className="mr-1">{e.emoji}</span>{e.label}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+function ExpressionCard() {
+  const active = useAtlas((s) => s.expression)
+  const meshes = useAtlas((s) => s.meshes)
+  if (!active) return null
+  const e = EXPRESSION_BY_ID[active]
+  const { setExpression, select, focus } = useAtlas.getState()
+  const pick = (sid: string) => { const m = meshes.find((x) => x.structureId === sid && x.side !== 'right') ?? meshes.find((x) => x.structureId === sid); if (m) { setExpression(null); select(m.id); focus(m.id) } }
+  return (
+    <div className="glass rounded-2xl p-4 shadow-2xl" data-testid="expression-card">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold text-white">{e.emoji} {e.label}</h2>
+        <button onClick={() => setExpression(null)} className="rounded-md px-2 text-slate-400 hover:text-white" aria-label="Close">✕</button>
+      </div>
+      <p className="mt-2 text-[13px] leading-relaxed text-slate-300">{e.text}</p>
+      <div className="mt-3 text-[11px] tracking-wider text-slate-500 uppercase">Muscles (glowing)</div>
+      <div className="mt-1 flex flex-wrap gap-1.5">{e.muscles.map((m) => <button key={m} onClick={() => pick(m)} className="rounded-full bg-[#b8433d]/25 px-2 py-0.5 text-[11px] text-rose-100 hover:bg-[#b8433d]/40">{CONTENT[m]?.name}</button>)}</div>
+      <div className="mt-2 text-[11px] tracking-wider text-slate-500 uppercase">Nerve supply (pulsing)</div>
+      <div className="mt-1 flex flex-wrap gap-1.5">{e.nerves.map((n) => <button key={n} onClick={() => pick(n)} className="rounded-full bg-amber-300/15 px-2 py-0.5 text-[11px] text-amber-100 hover:bg-amber-300/25">{CONTENT[n]?.name}</button>)}</div>
     </div>
   )
 }
@@ -87,14 +150,18 @@ function InfoPanel() {
   const selected = useAtlas((s) => s.selected)
   const meshes = useAtlas((s) => s.meshes)
   const isolated = useAtlas((s) => s.isolated)
-  const { select, hide, isolate, focus, showAll } = useAtlas.getState()
+  const highlight = useAtlas((s) => s.highlight)
+  const { select, hide, isolate, focus, showAll, setHighlight } = useAtlas.getState()
   const m = meshes.find((x) => x.id === selected)
   if (!m) return null
   const c = CONTENT[m.structureId]
   const layer = LAYER_BY_ID[m.layer]
   const pair = meshes.filter((x) => x.structureId === m.structureId).map((x) => x.id)
+  const isFacial = m.group === 'nerve.facial_nerve' || m.structureId === 'nerve.chorda_tympani'
+  const facial = isFacial ? meshes.filter((x) => (x.group === 'nerve.facial_nerve' || x.structureId === 'nerve.chorda_tympani') && x.side === m.side).sort((a, b) => BRANCH_ORDER.indexOf(a.structureId) - BRANCH_ORDER.indexOf(b.structureId)) : []
+  const hasMarkers = m.layer === 'muscles' && MARKER_MUSCLES.has(m.structureId)
   return (
-    <div className="glass flex max-h-full flex-col rounded-2xl shadow-2xl" data-testid="info-panel">
+    <div className="glass flex min-h-0 max-h-full flex-col rounded-2xl shadow-2xl" data-testid="info-panel">
       <div className="flex items-start gap-3 p-4 pb-2">
         <span className="mt-1.5 h-3 w-3 shrink-0 rounded-full" style={{ background: colorFor(m.structureId, m.layer) }} />
         <div className="min-w-0 flex-1">
@@ -108,7 +175,7 @@ function InfoPanel() {
         </div>
         <button onClick={() => select(null)} className="rounded-md px-2 text-slate-400 hover:text-white" aria-label="Close">✕</button>
       </div>
-      <div className="scroll-thin overflow-y-auto px-4 pb-3">
+      <div className="scroll-thin min-h-0 flex-1 overflow-y-auto px-4 pb-3">
         <p className="text-[13px] leading-relaxed text-slate-300">{c?.summary}</p>
         <div className="mt-2">
           <Row k="Origin" v={c?.origin} />
@@ -116,7 +183,32 @@ function InfoPanel() {
           <Row k="Innervation" v={c?.innervation} />
           <Row k="Action" v={c?.action} />
           <Row k="Fibres" v={c?.fibres} />
+          <Row k="Supplies" v={c?.supplies} />
+          <Row k="Nerve supply" v={c?.nerveSupply} />
+          <Row k="Blood supply" v={c?.blood} />
         </div>
+        {c?.clinical && (
+          <div className="mt-2 rounded-lg border border-amber-300/15 bg-amber-300/[0.06] px-3 py-2 text-[12.5px] leading-relaxed text-amber-100/90">
+            <span className="mr-1 font-semibold text-amber-200">Clinical</span>{c.clinical}
+          </div>
+        )}
+        {m.layer === 'muscles' && hasMarkers && (
+          <div className="mt-2 flex items-center gap-3 text-[11px] text-slate-400">
+            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-[#ff5b5b]" />Origin</span>
+            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-[#4fa8ff]" />Insertion</span>
+            <span className="text-slate-500">attachment areas shown on the bones</span>
+          </div>
+        )}
+        {facial.length > 0 && (
+          <div className="mt-3">
+            <div className="mb-1.5 text-[11px] tracking-wider text-slate-500 uppercase">Facial nerve ({sideLabel(m.side).toLowerCase()}) – pieces</div>
+            <div className="flex flex-wrap gap-1.5">
+              {facial.map((f) => (
+                <button key={f.id} data-branch={f.id} onClick={() => { select(f.id); focus(f.id) }} className={`rounded-full px-2 py-0.5 text-[11px] ${f.id === m.id ? 'bg-sky-400/25 text-sky-100' : 'bg-white/5 text-slate-300 hover:bg-white/10'}`}>{shortBranch(f.structureId)}</button>
+              ))}
+            </div>
+          </div>
+        )}
         <p className="mt-2 font-mono text-[10px] text-slate-600">id: {m.id} · source: {m.sourceNames}</p>
       </div>
       <div className="flex flex-wrap gap-2 border-t border-white/5 p-3">
@@ -128,6 +220,10 @@ function InfoPanel() {
             <button onClick={() => isolate([m.id])} className="rounded-lg bg-white/5 px-3 py-1.5 text-xs text-slate-200 hover:bg-white/10">Isolate</button>
             {pair.length > 1 && <button onClick={() => isolate(pair)} className="rounded-lg bg-white/5 px-3 py-1.5 text-xs text-slate-200 hover:bg-white/10">Isolate both sides</button>}
           </>
+        )}
+        {facial.length > 0 && (
+          highlight ? <button onClick={() => setHighlight(null)} data-testid="highlight-branches" className="rounded-lg bg-amber-400/15 px-3 py-1.5 text-xs text-amber-100 hover:bg-amber-400/25">Stop highlighting</button>
+            : <button onClick={() => setHighlight(facial.map((f) => f.id))} data-testid="highlight-branches" className="rounded-lg bg-amber-400/15 px-3 py-1.5 text-xs text-amber-100 hover:bg-amber-400/25">⚡ Highlight all branches</button>
         )}
         <button onClick={() => hide(m.id)} className="rounded-lg bg-white/5 px-3 py-1.5 text-xs text-slate-200 hover:bg-white/10">Hide</button>
       </div>
@@ -197,16 +293,18 @@ export default function App() {
       </header>
 
       {/* layers: desktop */}
-      <aside className="absolute top-20 left-4 hidden w-64 sm:block"><LayerPanel /></aside>
+      <aside className="scroll-thin absolute top-20 left-4 hidden max-h-[calc(100vh-190px)] w-64 overflow-y-auto sm:block"><LayerPanel /></aside>
       {/* layers: mobile drawer */}
-      {layersOpen && <aside className="absolute top-28 right-3 left-3 z-20 sm:hidden"><LayerPanel onClose={() => setLayersOpen(false)} /></aside>}
+      {layersOpen && <aside className="scroll-thin absolute top-28 right-3 left-3 z-20 max-h-[calc(100vh-260px)] overflow-y-auto sm:hidden"><LayerPanel onClose={() => setLayersOpen(false)} /></aside>}
 
       {/* info */}
-      <aside className={`absolute right-3 bottom-28 left-3 z-10 ${layersOpen ? 'hidden sm:block' : ''} max-h-[46vh] sm:top-20 sm:right-4 sm:bottom-auto sm:left-auto sm:max-h-[calc(100vh-150px)] sm:w-[360px]`}><InfoPanel /></aside>
+      <aside className={`absolute right-3 bottom-40 left-3 z-10 flex flex-col ${layersOpen ? 'hidden sm:flex' : ''} max-h-[46vh] sm:top-20 sm:right-4 sm:bottom-auto sm:left-auto sm:max-h-[calc(100vh-200px)] sm:w-[360px]`}><InfoPanel /><ExpressionCard /></aside>
 
       {/* hover label (desktop) */}
-      {hoverInfo && <div className="glass pointer-events-none absolute bottom-20 left-1/2 hidden -translate-x-1/2 rounded-full px-3 py-1 text-xs text-slate-200 sm:block">{displayName(hoverInfo)}</div>}
+      {hoverInfo && <div className="glass pointer-events-none absolute bottom-28 left-1/2 hidden -translate-x-1/2 rounded-full px-3 py-1 text-xs text-slate-200 sm:block">{displayName(hoverInfo)}</div>}
 
+      {/* expressions */}
+      <div className="absolute bottom-[104px] left-1/2 flex -translate-x-1/2 sm:bottom-16"><ExpressionBar /></div>
       {/* view buttons */}
       <div className="absolute bottom-14 left-1/2 flex -translate-x-1/2 gap-1 sm:bottom-6">
         <div className="glass flex gap-0.5 rounded-xl p-1">
@@ -220,7 +318,7 @@ export default function App() {
       <footer className="absolute right-0 bottom-0 left-0 flex items-end justify-between gap-3 px-3 pb-1.5 text-[10px] text-slate-500">
         <span>
           3D models: <a className="underline hover:text-slate-300" href="https://www.z-anatomy.com/" target="_blank" rel="noreferrer">Z-Anatomy</a> (based on BodyParts3D), licensed{' '}
-          <a className="underline hover:text-slate-300" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>. <span className="hidden sm:inline">Head subset extracted, decimated &amp; compressed. </span>Educational prototype, not for clinical use.
+          <a className="underline hover:text-slate-300" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>. <span className="hidden sm:inline">Head subset extracted, facial nerve split into branches, decimated &amp; compressed. </span>Educational prototype, not for clinical use.
         </span>
         <span id="fps" className="shrink-0 tabular-nums" />
       </footer>

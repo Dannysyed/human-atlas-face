@@ -154,5 +154,102 @@ s('muscular_triangle','Muscular triangle','Trigonum musculare','Lower front area
 s('sternocleidomastoid_region','Sternocleidomastoid region','Regio sternocleidomastoidea','Skin over the sternocleidomastoid muscle.')
 s('lateral_region_of_neck','Lateral region of neck','Regio cervicalis lateralis','Also called the posterior triangle of the neck, behind sternocleidomastoid.')
 s('posterior_region_of_neck','Posterior region of neck','Regio cervicalis posterior','Skin of the back of the neck (nuchal region).')
+
+# ================= v2: facial nerve branches =================
+C['nerve.facial_nerve'].update(name='Facial nerve (CN VII) – root & trunk',
+  summary='Leaves the brainstem, runs through the internal acoustic meatus and the facial canal of the temporal bone, exits at the stylomastoid foramen and enters the parotid gland, where it divides (the parotid plexus, or "pes anserinus") into five branches: temporal, zygomatic, buccal, marginal mandibular and cervical. Also carries taste and secretomotor fibres. In this model the piece includes the intracranial and intratemporal course plus two short twigs that are not labelled.',
+  supplies='Via its branches: muscles of facial expression, platysma, posterior belly of digastric, stylohyoid, stapedius',
+  clinical="Bell's palsy (idiopathic facial nerve palsy) weakens the whole of one side of the face, including the forehead; a stroke usually spares the forehead because of bilateral cortical input. The nerve runs through the parotid gland, between its superficial and deep parts, so it is at risk in parotid surgery.")
+def fb(slug,name,latin,summary,supplies,clinical): add('nerve.'+slug,name,latin,'Facial nerve branch',summary,supplies=supplies,clinical=clinical,fibres='Motor')
+fb('facial_temporal_branches','Temporal branches of facial nerve','Rami temporales nervi facialis','Leave the upper border of the parotid gland and cross the zygomatic arch to the temple and forehead.','Frontalis, upper orbicularis oculi, corrugator supercilii, anterior and superior auricular muscles','They lie superficially over the zygomatic arch, so they can be injured in arch fractures or temple/facelift surgery, causing an inability to raise the eyebrow on that side.')
+fb('facial_zygomatic_branches','Zygomatic branches of facial nerve','Rami zygomatici nervi facialis','Run forwards across the zygomatic bone towards the lateral angle of the eye and the infra-orbital region.','Orbicularis oculi (especially its lower part), zygomaticus major and minor; share supply of the upper-lip elevators with the buccal branches','Injury weakens eye closure, which can leave the cornea exposed and dry.')
+fb('facial_buccal_branches','Buccal branches of facial nerve','Rami buccales nervi facialis','Run forwards across the masseter, near the parotid duct, to the cheek, upper lip and nose. They form many interconnections with the zygomatic branches.','Buccinator, orbicularis oris, levator labii superioris (and alaeque nasi), levator anguli oris, risorius, nasalis, zygomaticus muscles','Because of their many cross-connections, an isolated buccal branch injury often recovers or is compensated. Buccinator weakness lets food collect in the cheek.')
+fb('facial_marginal_mandibular_branch','Marginal mandibular branch of facial nerve','Ramus marginalis mandibularis nervi facialis','Runs forwards along the lower border of the mandible, deep to platysma, crossing superficial to the facial artery and vein.','Depressor anguli oris, depressor labii inferioris, mentalis, lower orbicularis oris','At risk in submandibular gland surgery and upper neck incisions, so incisions are placed well below the jaw. Injury gives an asymmetric smile: the lower lip on that side cannot be pulled down.')
+fb('facial_cervical_branch','Cervical branch of facial nerve','Ramus colli nervi facialis','Leaves the lower pole of the parotid gland and descends into the neck beneath platysma.','Platysma','Injury is usually minor, but because platysma helps pull down the corner of the mouth it can mimic marginal mandibular weakness ("pseudo-paralysis").')
+C['nerve.chorda_tympani']['clinical']='Can be stretched or cut during middle-ear surgery, altering taste on the front of the tongue.'
+
+# ================= v2: new structures =================
+o('frontal_sinus','Frontal sinus','Sinus frontalis','Paranasal sinus','Air space in the frontal bone above the orbits; drains into the middle meatus of the nose. Absent at birth, it develops during childhood.',clinical='Can be involved in sinusitis, causing pain over the forehead.')
+o('sphenoidal_sinus','Sphenoidal sinus','Sinus sphenoidalis','Paranasal sinus','Air space in the body of the sphenoid bone, directly below the pituitary fossa; drains into the sphenoethmoidal recess.',clinical='Surgeons can reach the pituitary gland through it (transsphenoidal surgery).')
+o('ethmoidal_cells','Ethmoidal cells','Cellulae ethmoidales','Paranasal sinus','Groups of small air cells in the ethmoid bone between the nose and the orbit (anterior, middle and posterior groups).',clinical='Only a paper-thin plate of bone separates them from the orbit, so ethmoid sinusitis can spread to cause orbital cellulitis.')
+o('tongue','Tongue','Lingua','Mouth','Muscular organ for taste, chewing, swallowing and speech.',nerveSupply='Motor: hypoglossal nerve (CN XII), except palatoglossus (vagus). Anterior two-thirds: general sensation via the lingual nerve (V3), taste via the chorda tympani (CN VII). Posterior third: glossopharyngeal nerve (CN IX)',blood='Lingual artery',clinical='With a hypoglossal nerve lesion the protruded tongue deviates towards the weak side.')
+o('sublingual_gland','Sublingual gland','Glandula sublingualis','Gland','The smallest major salivary gland, under the mucosa of the floor of the mouth; opens through many small ducts on the sublingual fold. Secretomotor supply via the chorda tympani and submandibular ganglion.')
+o('lacrimal_sac','Lacrimal sac','Saccus lacrimalis','Lacrimal apparatus','Upper dilated end of the tear-drainage system, in the lacrimal fossa at the medial corner of the orbit. Receives tears from the canaliculi.',clinical='Infection of the sac (dacryocystitis) causes a tender swelling beside the nose.')
+o('nasolacrimal_duct','Nasolacrimal duct','Ductus nasolacrimalis','Lacrimal apparatus','Carries tears from the lacrimal sac to the inferior meatus of the nose, which is why the nose runs when you cry.')
+m('geniohyoid','Geniohyoid','Musculus geniohyoideus',NK,'Narrow suprahyoid muscle above mylohyoid.','Inferior mental spine of the mandible','Body of the hyoid bone','C1 fibres carried by the hypoglossal nerve','Pulls the hyoid forwards and up; helps depress the mandible')
+m('genioglossus','Genioglossus','Musculus genioglossus','Tongue','Fan-shaped extrinsic muscle forming the bulk of the tongue.','Superior mental spine of the mandible','Dorsum of the tongue and body of the hyoid','Hypoglossal nerve (CN XII)','Protrudes the tongue')
+C['muscle.genioglossus']['clinical']='With a hypoglossal nerve lesion the tongue deviates towards the weak side when protruded, because the healthy genioglossus pushes it across.'
+m('hyoglossus','Hyoglossus','Musculus hyoglossus','Tongue','Thin quadrilateral extrinsic tongue muscle.','Body and greater horn of the hyoid bone','Side of the tongue','Hypoglossal nerve (CN XII)','Depresses and retracts the tongue')
+v('middle_meningeal_artery','Middle meningeal artery','Arteria meningea media',AR,'Branch of the maxillary artery that enters the skull through the foramen spinosum to supply the dura and skull bones.')
+C['vessel.middle_meningeal_artery']['clinical']='Its anterior branch runs deep to the pterion, where the skull is thin; a blow there can tear it, causing an extradural haematoma.'
+v('buccal_artery','Buccal artery','Arteria buccalis',AR,'Branch of the maxillary artery that runs with the buccal nerve to the cheek and buccinator.')
+v('anterior_deep_temporal_artery','Anterior deep temporal artery','Arteria temporalis profunda anterior',AR,'Branch of the maxillary artery supplying the temporalis muscle.')
+v('posterior_deep_temporal_artery','Posterior deep temporal artery','Arteria temporalis profunda posterior',AR,'Branch of the maxillary artery supplying the temporalis muscle.')
+v('descending_palatine_artery','Descending palatine artery','Arteria palatina descendens',AR,'Branch of the maxillary artery that descends in the palatine canal and divides into the greater and lesser palatine arteries for the palate.')
+v('posterior_superior_alveolar_artery','Posterior superior alveolar artery','Arteria alveolaris superior posterior',AR,'Branch of the maxillary artery supplying the upper molar and premolar teeth, gums and maxillary sinus.')
+v('mental_artery','Mental branch of inferior alveolar artery','Ramus mentalis arteriae alveolaris inferioris',AR,'Leaves the mental foramen with the mental nerve to supply the chin and lower lip.')
+v('lacrimal_artery','Lacrimal artery','Arteria lacrimalis',AR,'Branch of the ophthalmic artery supplying the lacrimal gland and eyelids.')
+v('ascending_pharyngeal_artery','Ascending pharyngeal artery','Arteria pharyngea ascendens',AR,'Smallest branch of the external carotid; supplies the pharynx, prevertebral muscles, middle ear and meninges.')
+v('vertebral_artery','Vertebral artery','Arteria vertebralis',AR,'Branch of the subclavian artery that climbs through the transverse foramina of the cervical vertebrae, enters the skull through the foramen magnum and joins its partner to form the basilar artery.')
+v('lingual_vein','Lingual vein','Vena lingualis',VE,'Drains the tongue into the internal jugular vein.')
+v('maxillary_veins','Maxillary veins','Venae maxillares',VE,'Short veins from the pterygoid plexus that join the superficial temporal veins to form the retromandibular vein.')
+v('superior_ophthalmic_vein','Superior ophthalmic vein','Vena ophthalmica superior',VE,'Drains the orbit through the superior orbital fissure into the cavernous sinus; connects with the angular vein at the front.')
+v('inferior_ophthalmic_vein','Inferior ophthalmic vein','Vena ophthalmica inferior',VE,'Drains the floor of the orbit to the cavernous sinus and the pterygoid plexus.')
+v('transverse_sinus','Transverse sinus','Sinus transversus','Dural venous sinus','Runs from the confluence of sinuses along the attachment of the tentorium to become the sigmoid sinus.')
+v('sigmoid_sinus','Sigmoid sinus','Sinus sigmoideus','Dural venous sinus','S-shaped sinus grooving the mastoid part of the temporal bone; continues as the internal jugular vein at the jugular foramen.')
+C['vessel.sigmoid_sinus']['clinical']='Because it lies next to the mastoid air cells, untreated mastoiditis can spread to it and cause sinus thrombosis.'
+v('cavernous_sinus','Cavernous sinus','Sinus cavernosus','Dural venous sinus','Venous space on each side of the pituitary fossa. The internal carotid artery and abducens nerve run through it; the oculomotor, trochlear, ophthalmic and maxillary nerves lie in its lateral wall.')
+C['vessel.cavernous_sinus']['clinical']='Facial infections can spread here through the ophthalmic veins (cavernous sinus thrombosis), affecting the eye-movement nerves.'
+v('superior_sagittal_sinus','Superior sagittal sinus','Sinus sagittalis superior','Dural venous sinus','Runs along the upper margin of the falx cerebri; arachnoid granulations return cerebrospinal fluid into it. Drains to the confluence of sinuses.')
+v('straight_sinus','Straight sinus','Sinus rectus','Dural venous sinus','Lies where the falx cerebri meets the tentorium; receives the inferior sagittal sinus and great cerebral vein and drains to the confluence of sinuses.')
+def br(s,name,latin,summary,**k): add('brain.'+s,name,latin,'Brain',summary,**k)
+br('cerebral_hemisphere','Cerebral hemisphere','Hemispherium cerebri','Frontal, parietal, temporal and occipital lobes with the insula and limbic lobe. Each hemisphere mainly controls and senses the opposite side of the body. In this model the gyri are merged into one piece per side.')
+br('cerebellum','Cerebellum','Cerebellum','Coordinates movement, balance and posture, and contributes to motor learning.',clinical='Damage causes clumsiness (ataxia) on the same side as the lesion.')
+br('brainstem','Brainstem','Truncus encephali','Midbrain, pons and medulla oblongata. Contains the nuclei of cranial nerves III–XII (the facial nerve nucleus is in the pons) and centres that control breathing and heart rate.')
+br('corpus_callosum','Corpus callosum','Corpus callosum','The largest bundle of fibres connecting the two cerebral hemispheres.')
+br('falx_cerebri','Falx cerebri','Falx cerebri','Sickle-shaped fold of dura mater between the cerebral hemispheres; the superior and inferior sagittal sinuses run along its edges.')
+
+# ================= v2: richer content for existing structures =================
+def enrich(sid,**k):
+    C[sid].update({kk:vv for kk,vv in k.items() if vv})
+FAB='Branches of the facial artery'
+for s_,bl in {'frontalis':'Supra-orbital and supratrochlear arteries; frontal branch of superficial temporal artery','occipitalis':'Occipital and posterior auricular arteries','temporoparietalis':'Superficial temporal artery',
+ 'procerus':'Supratrochlear artery and angular artery','corrugator_supercilii':'Supratrochlear and supra-orbital arteries','orbicularis_oculi_orbital':'Branches of the facial, superficial temporal and ophthalmic arteries','orbicularis_oculi_palpebral':'Branches of the facial, superficial temporal and ophthalmic arteries',
+ 'nasalis':FAB,'depressor_septi_nasi':'Superior labial artery','levator_labii_superioris_alaeque_nasi':'Facial and infra-orbital arteries','levator_labii_superioris':'Facial and infra-orbital arteries','levator_anguli_oris':'Facial and infra-orbital arteries',
+ 'zygomaticus_major':'Superior labial branch of the facial artery','zygomaticus_minor':FAB,'risorius':'Superior labial branch of the facial artery','buccinator':'Buccal artery (maxillary) and facial artery','orbicularis_oris':'Superior and inferior labial arteries',
+ 'depressor_anguli_oris':'Inferior labial branch of the facial artery','depressor_labii_inferioris':'Inferior labial and mental arteries','mentalis':'Inferior labial and mental arteries','platysma':'Submental and suprascapular arteries',
+ 'temporalis':'Deep temporal arteries (maxillary) and middle temporal artery (superficial temporal)','masseter_superficial':'Masseteric artery (maxillary), transverse facial and facial arteries','masseter_deep':'Masseteric artery (maxillary), transverse facial and facial arteries',
+ 'medial_pterygoid':'Pterygoid branches of the maxillary artery','lateral_pterygoid_superior':'Pterygoid branches of the maxillary artery','lateral_pterygoid_inferior':'Pterygoid branches of the maxillary artery',
+ 'sternocleidomastoid':'Occipital and superior thyroid arteries','digastric_anterior':'Submental artery','digastric_posterior':'Occipital and posterior auricular arteries','mylohyoid':'Mylohyoid branch of the inferior alveolar artery and submental artery',
+ 'levator_palpebrae_superioris':'Muscular branches of the ophthalmic artery','superior_rectus':'Muscular branches of the ophthalmic artery','inferior_rectus':'Ophthalmic and infra-orbital arteries','medial_rectus':'Muscular branches of the ophthalmic artery','lateral_rectus':'Ophthalmic and lacrimal arteries','superior_oblique':'Muscular branches of the ophthalmic artery','inferior_oblique':'Ophthalmic and infra-orbital arteries'}.items():
+    enrich('muscle.'+s_,blood=bl)
+CL={'frontalis':'Spared in a stroke (upper motor neuron lesion) because of bilateral cortical control, but paralysed in Bell\'s palsy. Botulinum toxin is used to soften forehead lines.',
+ 'orbicularis_oculi_orbital':"Weakness (e.g. Bell's palsy) prevents full eye closure, so the cornea can dry out.",'orbicularis_oculi_palpebral':"Weakness (e.g. Bell's palsy) stops the eye from closing fully during blinking.",
+ 'corrugator_supercilii':'A target for botulinum toxin to reduce vertical frown lines between the brows.','procerus':'A target for botulinum toxin to reduce horizontal lines at the root of the nose.',
+ 'zygomaticus_major':'A genuine ("Duchenne") smile combines zygomaticus major with the orbital part of orbicularis oculi.','buccinator':'When paralysed, food collects between the cheek and the teeth.',
+ 'orbicularis_oris':'Weakness causes drooling and difficulty whistling or blowing.','masseter':'',
+ 'masseter_superficial':'Easily felt at the angle of the jaw when you clench your teeth; it may enlarge in people who grind their teeth.','temporalis':'Can be felt contracting at the temple when you clench your teeth.',
+ 'lateral_pterygoid_inferior':'The main jaw-opening muscle of mastication; the others close the jaw.','sternocleidomastoid':'A shortened sternocleidomastoid in infants causes congenital muscular torticollis (head tilt).',
+ 'levator_palpebrae_superioris':'Oculomotor nerve palsy causes complete ptosis (drooping lid); Horner syndrome causes only partial ptosis via the smooth-muscle part.',
+ 'lateral_rectus':'Abducens nerve palsy stops the eye turning outwards, giving horizontal double vision.','superior_oblique':'Trochlear nerve palsy gives vertical double vision, worst when looking down (e.g. going downstairs).'}
+for s_,c_ in CL.items():
+    if c_: enrich('muscle.'+s_,clinical=c_)
+NC={'trigeminal_nerve':'Trigeminal neuralgia causes brief, severe electric-shock-like facial pain in its territory.','ophthalmic_nerve':'Shingles in this division (herpes zoster ophthalmicus) can threaten the eye.',
+ 'maxillary_nerve':'Orbital floor fractures can damage its infra-orbital continuation, numbing the cheek and upper lip.','inferior_alveolar_nerve':'Blocked with local anaesthetic for lower dental work; can be injured during lower third-molar removal.',
+ 'lingual_nerve':'Lies close to the lower third molar and can be injured during its extraction, numbing the tongue.','mental_nerve':'Damage numbs the lower lip and chin.',
+ 'optic_nerve':'Swelling of the optic disc (papilloedema) is a sign of raised intracranial pressure.','oculomotor_nerve':'A palsy gives a "down and out" eye, ptosis and often a dilated pupil (e.g. from an aneurysm pressing on it).',
+ 'hypoglossal_nerve':'A lesion makes the protruded tongue deviate towards the weak side.','abducens_nerve':'Its long intracranial course makes it vulnerable to raised intracranial pressure.'}
+for s_,c_ in NC.items(): enrich('nerve.'+s_,clinical=c_)
+VC={'superficial_temporal_artery':'Biopsied to diagnose giant cell (temporal) arteritis.','internal_carotid_artery':'Narrowing at its origin (carotid stenosis) is an important cause of stroke.',
+ 'internal_jugular_vein':'Common site for central venous catheters.','maxillary_artery':'Its sphenopalatine branch is the usual source of severe posterior nosebleeds.','facial_artery':'Its pulse can be felt where it crosses the lower border of the mandible.'}
+for s_,c_ in VC.items(): enrich('vessel.'+s_,clinical=c_)
+BC={'mandible':'Commonly fractured, often in two places at once.','zygomatic_bone':'Fractures of the cheekbone complex can flatten the cheek and numb the cheek via the infra-orbital nerve.',
+ 'nasal_bone':'The most commonly fractured facial bone.','maxilla':'Mid-face fractures are classified by the Le Fort system.','temporal_bone':'Its thin squamous part at the pterion overlies the middle meningeal artery.',
+ 'ethmoid_bone':'Fracture of the cribriform plate can cause loss of smell and leakage of cerebrospinal fluid from the nose.','sphenoid_bone':'The pituitary gland sits in its sella turcica.',
+ 'hyoid_bone':'Fracture of the hyoid can be a forensic sign of strangulation.','atlas_c1':'A burst fracture of the atlas is called a Jefferson fracture.','axis_c2':'Fractures of the dens are among the commonest cervical spine fractures in older people.'}
+for s_,c_ in BC.items(): enrich('bone.'+s_,clinical=c_)
+enrich('organ.parotid_gland',clinical='Swells in mumps. Most parotid tumours are benign (pleomorphic adenoma), but surgery must protect the facial nerve running through the gland.')
+enrich('organ.lacrimal_gland',clinical='Reduced tear secretion on the affected side can help localise a facial nerve lesion proximal to the geniculate ganglion.')
+
 json.dump(C,open('/workspace/atlas-face/app/src/data/structures.json','w'),indent=1,ensure_ascii=False)
 print(len(C))

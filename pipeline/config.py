@@ -63,3 +63,50 @@ ITEMS+=[
  Sk(['Sternocleidomastoid region','Lesser supraclavicular fossa'],'sternocleidomastoid_region'),Sk(['Lateral region of neck'],'lateral_region_of_neck'),Sk(['Posterior region of neck'],'posterior_region_of_neck'),
 ]
 LAYER_PREFIX={'bones':'bone','muscles':'muscle','nerves':'nerve','vessels':'vessel','eyes':'organ','skin':'skin'}
+
+# ---------- v2 additions ----------
+ITEMS+=[
+ (S,['Sinus of frontal bone'],'eyes','frontal_sinus',False),
+ (S,['Sinus of sphenoid bone'],'eyes','sphenoidal_sinus',False),
+ (S,['Anterior cells of ethmoid bone','Middle cells of ethmoid bone','Posterior cells of ethmoid bone'],'eyes','ethmoidal_cells',True),
+ (V,['Tongue'],'eyes','tongue',False,{'subdiv':2,'maxv':5000}),
+ (V,['Sublingual gland'],'eyes','sublingual_gland',True),
+ (N,['Lacrimal sac'],'eyes','lacrimal_sac',True),
+ (N,['Nasolacrimal duct'],'eyes','nasolacrimal_duct',True),
+ (M,['Geniohyoid muscle'],'muscles','geniohyoid',True),
+ (M,['Genioglossus muscle'],'muscles','genioglossus',True),
+ (M,['Hyoglossus muscle'],'muscles','hyoglossus',True),
+]
+ITEMS+=[A(n,s) for n,s in [
+ ('Middle meningeal artery','middle_meningeal_artery'),('Buccal artery','buccal_artery'),('Anterior deep temporal artery','anterior_deep_temporal_artery'),
+ ('Posterior deep temporal artery','posterior_deep_temporal_artery'),('Descending palatine artery','descending_palatine_artery'),('Posterior superior alveolar artery','posterior_superior_alveolar_artery'),
+ ('Mental branch of inferior alveolar artery','mental_artery'),('Lacrimal artery','lacrimal_artery'),('Ascending pharyngeal artery','ascending_pharyngeal_artery'),('Vertebral artery','vertebral_artery'),
+ ('Lingual vein','lingual_vein'),('Maxillary veins','maxillary_veins'),('Superior ophthalmic vein','superior_ophthalmic_vein'),('Inferior ophthalmic vein','inferior_ophthalmic_vein'),
+ ('Transverse sinus','transverse_sinus'),('Sigmoid sinus','sigmoid_sinus'),('Cavernous sinus','cavernous_sinus'),
+]]
+ITEMS+=[
+ (C,['Superior sagittal sinus'],'vessels','superior_sagittal_sinus',False),
+ (C,['Straight sinus'],'vessels','straight_sinus',False),
+ # brain (merged from Z-Anatomy gyri / parts); 'groups' gathers all descendant meshes
+ (N,[],'brain','cerebral_hemisphere',True,{'groups':['Frontal lobe.g','Parietal lobe.g','Temporal lobe.g','Occipital lobe.g','Limbic lobe.g','Insula.g'],'maxv':14000}),
+ (N,[],'brain','cerebellum',False,{'groups':['Cerebellum.g'],'maxv':9000}),
+ (N,[],'brain','brainstem',False,{'groups':['Midbrain.g','Brainstem.g'],'maxv':6000,'extra':['Pons.l','Pons.r','Medulla oblongata.l','Medulla oblongata.r']}),
+ (N,['Corpus callosum'],'brain','corpus_callosum',False,{'maxv':2000}),
+ (N,['Falx cerebri'],'brain','falx_cerebri',False,{'maxv':3000}),
+]
+LAYER_PREFIX['brain']='brain'
+# Z-Anatomy attachment markers (.o = origin, .e = insertion) -> our muscle slugs
+MARKERS={
+ 'Anterior belly of digastric muscle':['digastric_anterior'],'Bucinator':['buccinator'],'Depressor anguli oris':['depressor_anguli_oris'],
+ 'Depressor labii inferioris':['depressor_labii_inferioris'],'Depressor septi nasi':['depressor_septi_nasi'],'Frontalis muscle':['frontalis'],
+ 'Geniohyoid muscle':['geniohyoid'],'Lateral pterygoid muscle':['lateral_pterygoid_superior','lateral_pterygoid_inferior'],'Levator anguli oris':['levator_anguli_oris'],
+ 'Levator labii superioris':['levator_labii_superioris'],'Levator nasolabialis':['levator_labii_superioris_alaeque_nasi'],'Masseter':['masseter_superficial','masseter_deep'],
+ 'Medial pterygoid muscle':['medial_pterygoid'],'Mentalis muscle':['mentalis'],'Mylohyoid muscle':['mylohyoid'],'Nasalis muscle':['nasalis'],'Occipitalis muscle':['occipitalis'],
+ 'Orbicularis oris muscle':['orbicularis_oris'],'Orbital part of orbicularis oculi':['orbicularis_oculi_orbital'],'Procerus muscle':['procerus'],
+ 'Sternocleidomastoid muscle':['sternocleidomastoid'],'Temporalis muscle':['temporalis'],'Zygomaticus major muscle':['zygomaticus_major'],'Zygomaticus minor muscle':['zygomaticus_minor'],
+}
+# facial nerve split: reference centroids (left side, Blender world coords, |x|) of the tube components -> branch
+FACIAL_REF=[((0.0387,-0.0055,1.5611),'SPLIT'),((0.0494,-0.0362,1.5651),'zygomatic'),((0.0426,-0.0566,1.5477),'buccal'),((0.059,-0.0362,1.5814),'temporal'),
+ ((0.0475,-0.0153,1.5277),'cervical'),((0.0471,0.0089,1.5779),'trunk'),((0.0417,-0.0062,1.5851),'trunk'),((0.0399,-0.0693,1.554),'zygomatic'),
+ ((0.0608,-0.0467,1.6038),'temporal'),((0.0416,-0.0506,1.5134),'marginal'),((0.0314,-0.0776,1.534),'buccal'),((0.0053,0.0144,1.5792),'trunk')]
+FACIAL_SLUG={'trunk':'facial_nerve','temporal':'facial_temporal_branches','zygomatic':'facial_zygomatic_branches','buccal':'facial_buccal_branches','marginal':'facial_marginal_mandibular_branch','cervical':'facial_cervical_branch'}

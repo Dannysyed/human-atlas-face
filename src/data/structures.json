@@ -21,37 +21,43 @@
   "name": "Temporal bone",
   "latin": "Os temporale",
   "group": "Cranium",
-  "summary": "Houses the middle and inner ear. Bears the mandibular fossa of the temporomandibular joint, and the mastoid, styloid and zygomatic processes."
+  "summary": "Houses the middle and inner ear. Bears the mandibular fossa of the temporomandibular joint, and the mastoid, styloid and zygomatic processes.",
+  "clinical": "Its thin squamous part at the pterion overlies the middle meningeal artery."
  },
  "bone.sphenoid_bone": {
   "name": "Sphenoid bone",
   "latin": "Os sphenoidale",
   "group": "Cranium",
-  "summary": "Central bone of the skull base. Its sella turcica holds the pituitary gland; its wings and pterygoid processes give passage and attachment to many nerves and muscles."
+  "summary": "Central bone of the skull base. Its sella turcica holds the pituitary gland; its wings and pterygoid processes give passage and attachment to many nerves and muscles.",
+  "clinical": "The pituitary gland sits in its sella turcica."
  },
  "bone.ethmoid_bone": {
   "name": "Ethmoid bone",
   "latin": "Os ethmoidale",
   "group": "Cranium",
-  "summary": "Light, air-filled bone between the orbits. Its cribriform plate transmits olfactory nerve fibres; it forms part of the nasal septum and the superior and middle nasal conchae."
+  "summary": "Light, air-filled bone between the orbits. Its cribriform plate transmits olfactory nerve fibres; it forms part of the nasal septum and the superior and middle nasal conchae.",
+  "clinical": "Fracture of the cribriform plate can cause loss of smell and leakage of cerebrospinal fluid from the nose."
  },
  "bone.maxilla": {
   "name": "Maxilla",
   "latin": "Maxilla",
   "group": "Facial skeleton",
-  "summary": "The upper jaw. Holds the upper teeth and forms the floor of the orbit, part of the hard palate and the lateral wall of the nasal cavity. Contains the maxillary sinus."
+  "summary": "The upper jaw. Holds the upper teeth and forms the floor of the orbit, part of the hard palate and the lateral wall of the nasal cavity. Contains the maxillary sinus.",
+  "clinical": "Mid-face fractures are classified by the Le Fort system."
  },
  "bone.zygomatic_bone": {
   "name": "Zygomatic bone",
   "latin": "Os zygomaticum",
   "group": "Facial skeleton",
-  "summary": "The cheekbone. Forms the prominence of the cheek and part of the lateral orbital wall; with the temporal bone it forms the zygomatic arch."
+  "summary": "The cheekbone. Forms the prominence of the cheek and part of the lateral orbital wall; with the temporal bone it forms the zygomatic arch.",
+  "clinical": "Fractures of the cheekbone complex can flatten the cheek and numb the cheek via the infra-orbital nerve."
  },
  "bone.nasal_bone": {
   "name": "Nasal bone",
   "latin": "Os nasale",
   "group": "Facial skeleton",
-  "summary": "Small paired bones forming the bony bridge of the nose."
+  "summary": "Small paired bones forming the bony bridge of the nose.",
+  "clinical": "The most commonly fractured facial bone."
  },
  "bone.lacrimal_bone": {
   "name": "Lacrimal bone",
@@ -81,25 +87,29 @@
   "name": "Mandible",
   "latin": "Mandibula",
   "group": "Facial skeleton",
-  "summary": "The lower jaw, the only movable bone of the skull. Holds the lower teeth; its condyles form the temporomandibular joints. The mental foramen transmits the mental nerve and vessels."
+  "summary": "The lower jaw, the only movable bone of the skull. Holds the lower teeth; its condyles form the temporomandibular joints. The mental foramen transmits the mental nerve and vessels.",
+  "clinical": "Commonly fractured, often in two places at once."
  },
  "bone.hyoid_bone": {
   "name": "Hyoid bone",
   "latin": "Os hyoideum",
   "group": "Neck",
-  "summary": "U-shaped bone that does not articulate with any other bone. Suspended by muscles and ligaments, it anchors the tongue and the supra- and infrahyoid muscles."
+  "summary": "U-shaped bone that does not articulate with any other bone. Suspended by muscles and ligaments, it anchors the tongue and the supra- and infrahyoid muscles.",
+  "clinical": "Fracture of the hyoid can be a forensic sign of strangulation."
  },
  "bone.atlas_c1": {
   "name": "Atlas (C1)",
   "latin": "Atlas",
   "group": "Cervical spine",
-  "summary": "First cervical vertebra. Has no body; it carries the skull, and the atlanto-occipital joints allow nodding."
+  "summary": "First cervical vertebra. Has no body; it carries the skull, and the atlanto-occipital joints allow nodding.",
+  "clinical": "A burst fracture of the atlas is called a Jefferson fracture."
  },
  "bone.axis_c2": {
   "name": "Axis (C2)",
   "latin": "Axis",
   "group": "Cervical spine",
-  "summary": "Second cervical vertebra. Its dens (odontoid process) is the pivot around which the atlas and skull rotate."
+  "summary": "Second cervical vertebra. Its dens (odontoid process) is the pivot around which the atlas and skull rotate.",
+  "clinical": "Fractures of the dens are among the commonest cervical spine fractures in older people."
  },
  "bone.major_alar_cartilage": {
   "name": "Major alar cartilage",
@@ -139,7 +149,9 @@
   "origin": "Epicranial aponeurosis",
   "insertion": "Skin of the eyebrows and forehead",
   "innervation": "Temporal branches of the facial nerve (CN VII)",
-  "action": "Raises the eyebrows and wrinkles the forehead"
+  "action": "Raises the eyebrows and wrinkles the forehead",
+  "blood": "Supra-orbital and supratrochlear arteries; frontal branch of superficial temporal artery",
+  "clinical": "Spared in a stroke (upper motor neuron lesion) because of bilateral cortical control, but paralysed in Bell's palsy. Botulinum toxin is used to soften forehead lines."
  },
  "muscle.occipitalis": {
   "name": "Occipitalis (occipital belly of occipitofrontalis)",
@@ -149,7 +161,8 @@
   "origin": "Lateral superior nuchal line and mastoid part of the temporal bone",
   "insertion": "Epicranial aponeurosis",
   "innervation": "Posterior auricular branch of the facial nerve (CN VII)",
-  "action": "Draws the scalp backwards"
+  "action": "Draws the scalp backwards",
+  "blood": "Occipital and posterior auricular arteries"
  },
  "muscle.temporoparietalis": {
   "name": "Temporoparietalis",
@@ -159,7 +172,8 @@
   "origin": "Fascia above the auricle",
   "insertion": "Epicranial aponeurosis",
   "innervation": "Temporal branches of the facial nerve (CN VII)",
-  "action": "Tightens the scalp"
+  "action": "Tightens the scalp",
+  "blood": "Superficial temporal artery"
  },
  "muscle.epicranial_aponeurosis": {
   "name": "Epicranial aponeurosis",
@@ -175,7 +189,9 @@
   "origin": "Fascia over the nasal bone and upper lateral nasal cartilage",
   "insertion": "Skin between the eyebrows",
   "innervation": "Facial nerve (CN VII)",
-  "action": "Pulls the medial eyebrows down, making horizontal wrinkles over the bridge of the nose"
+  "action": "Pulls the medial eyebrows down, making horizontal wrinkles over the bridge of the nose",
+  "blood": "Supratrochlear artery and angular artery",
+  "clinical": "A target for botulinum toxin to reduce horizontal lines at the root of the nose."
  },
  "muscle.corrugator_supercilii": {
   "name": "Corrugator supercilii",
@@ -185,7 +201,9 @@
   "origin": "Medial end of the superciliary arch",
   "insertion": "Skin of the middle of the eyebrow",
   "innervation": "Temporal branches of the facial nerve (CN VII)",
-  "action": "Draws the eyebrows medially and down (frowning)"
+  "action": "Draws the eyebrows medially and down (frowning)",
+  "blood": "Supratrochlear and supra-orbital arteries",
+  "clinical": "A target for botulinum toxin to reduce vertical frown lines between the brows."
  },
  "muscle.orbicularis_oculi_orbital": {
   "name": "Orbicularis oculi – orbital part",
@@ -195,7 +213,9 @@
   "origin": "Nasal part of frontal bone, frontal process of maxilla, medial palpebral ligament",
   "insertion": "Encircles the orbit and returns near its origin",
   "innervation": "Temporal and zygomatic branches of the facial nerve (CN VII)",
-  "action": "Closes the eyelids tightly (squeezing)"
+  "action": "Closes the eyelids tightly (squeezing)",
+  "blood": "Branches of the facial, superficial temporal and ophthalmic arteries",
+  "clinical": "Weakness (e.g. Bell's palsy) prevents full eye closure, so the cornea can dry out."
  },
  "muscle.orbicularis_oculi_palpebral": {
   "name": "Orbicularis oculi – palpebral part",
@@ -205,7 +225,9 @@
   "origin": "Medial palpebral ligament",
   "insertion": "Lateral palpebral raphe",
   "innervation": "Temporal and zygomatic branches of the facial nerve (CN VII)",
-  "action": "Closes the eyelids gently (blinking)"
+  "action": "Closes the eyelids gently (blinking)",
+  "blood": "Branches of the facial, superficial temporal and ophthalmic arteries",
+  "clinical": "Weakness (e.g. Bell's palsy) stops the eye from closing fully during blinking."
  },
  "muscle.nasalis": {
   "name": "Nasalis",
@@ -215,7 +237,8 @@
   "origin": "Maxilla, above the incisor and canine teeth",
   "insertion": "Aponeurosis over the nasal dorsum and the alar cartilages",
   "innervation": "Buccal branches of the facial nerve (CN VII)",
-  "action": "Compresses (transverse part) or flares (alar part) the nostrils"
+  "action": "Compresses (transverse part) or flares (alar part) the nostrils",
+  "blood": "Branches of the facial artery"
  },
  "muscle.depressor_septi_nasi": {
   "name": "Depressor septi nasi",
@@ -225,7 +248,8 @@
   "origin": "Maxilla above the central incisor",
   "insertion": "Mobile part of the nasal septum",
   "innervation": "Buccal branches of the facial nerve (CN VII)",
-  "action": "Pulls the tip of the nose down"
+  "action": "Pulls the tip of the nose down",
+  "blood": "Superior labial artery"
  },
  "muscle.levator_labii_superioris_alaeque_nasi": {
   "name": "Levator labii superioris alaeque nasi",
@@ -235,7 +259,8 @@
   "origin": "Frontal process of the maxilla",
   "insertion": "Alar cartilage and skin of the upper lip",
   "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
-  "action": "Elevates the upper lip and dilates the nostril"
+  "action": "Elevates the upper lip and dilates the nostril",
+  "blood": "Facial and infra-orbital arteries"
  },
  "muscle.levator_labii_superioris": {
   "name": "Levator labii superioris",
@@ -245,7 +270,8 @@
   "origin": "Infra-orbital margin of the maxilla, above the infra-orbital foramen",
   "insertion": "Skin and muscle of the upper lip",
   "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
-  "action": "Elevates the upper lip"
+  "action": "Elevates the upper lip",
+  "blood": "Facial and infra-orbital arteries"
  },
  "muscle.levator_anguli_oris": {
   "name": "Levator anguli oris",
@@ -255,7 +281,8 @@
   "origin": "Canine fossa of the maxilla, below the infra-orbital foramen",
   "insertion": "Angle of the mouth (modiolus)",
   "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
-  "action": "Elevates the angle of the mouth"
+  "action": "Elevates the angle of the mouth",
+  "blood": "Facial and infra-orbital arteries"
  },
  "muscle.zygomaticus_major": {
   "name": "Zygomaticus major",
@@ -265,7 +292,9 @@
   "origin": "Lateral surface of the zygomatic bone",
   "insertion": "Angle of the mouth (modiolus)",
   "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
-  "action": "Draws the angle of the mouth upwards and laterally"
+  "action": "Draws the angle of the mouth upwards and laterally",
+  "blood": "Superior labial branch of the facial artery",
+  "clinical": "A genuine (\"Duchenne\") smile combines zygomaticus major with the orbital part of orbicularis oculi."
  },
  "muscle.zygomaticus_minor": {
   "name": "Zygomaticus minor",
@@ -275,7 +304,8 @@
   "origin": "Zygomatic bone",
   "insertion": "Upper lip",
   "innervation": "Zygomatic and buccal branches of the facial nerve (CN VII)",
-  "action": "Elevates the upper lip"
+  "action": "Elevates the upper lip",
+  "blood": "Branches of the facial artery"
  },
  "muscle.risorius": {
   "name": "Risorius",
@@ -285,7 +315,8 @@
   "origin": "Fascia over the parotid gland and masseter",
   "insertion": "Angle of the mouth",
   "innervation": "Buccal branches of the facial nerve (CN VII)",
-  "action": "Pulls the angle of the mouth laterally"
+  "action": "Pulls the angle of the mouth laterally",
+  "blood": "Superior labial branch of the facial artery"
  },
  "muscle.buccinator": {
   "name": "Buccinator",
@@ -295,7 +326,9 @@
   "origin": "Alveolar processes of maxilla and mandible opposite the molars; pterygomandibular raphe",
   "insertion": "Angle of the mouth, blending with orbicularis oris",
   "innervation": "Buccal branches of the facial nerve (CN VII)",
-  "action": "Presses the cheek against the teeth, keeping food between them; used in blowing"
+  "action": "Presses the cheek against the teeth, keeping food between them; used in blowing",
+  "blood": "Buccal artery (maxillary) and facial artery",
+  "clinical": "When paralysed, food collects between the cheek and the teeth."
  },
  "muscle.orbicularis_oris": {
   "name": "Orbicularis oris",
@@ -305,7 +338,9 @@
   "origin": "Maxilla and mandible near the midline, and fibres from other muscles at the modiolus",
   "insertion": "Skin and mucous membrane of the lips",
   "innervation": "Buccal and marginal mandibular branches of the facial nerve (CN VII)",
-  "action": "Closes and protrudes the lips"
+  "action": "Closes and protrudes the lips",
+  "blood": "Superior and inferior labial arteries",
+  "clinical": "Weakness causes drooling and difficulty whistling or blowing."
  },
  "muscle.depressor_anguli_oris": {
   "name": "Depressor anguli oris",
@@ -315,7 +350,8 @@
   "origin": "Oblique line of the mandible",
   "insertion": "Angle of the mouth",
   "innervation": "Marginal mandibular branch of the facial nerve (CN VII)",
-  "action": "Pulls the angle of the mouth down (frowning)"
+  "action": "Pulls the angle of the mouth down (frowning)",
+  "blood": "Inferior labial branch of the facial artery"
  },
  "muscle.depressor_labii_inferioris": {
   "name": "Depressor labii inferioris",
@@ -325,7 +361,8 @@
   "origin": "Oblique line of the mandible, between the symphysis and mental foramen",
   "insertion": "Skin of the lower lip",
   "innervation": "Marginal mandibular branch of the facial nerve (CN VII)",
-  "action": "Depresses the lower lip"
+  "action": "Depresses the lower lip",
+  "blood": "Inferior labial and mental arteries"
  },
  "muscle.mentalis": {
   "name": "Mentalis",
@@ -335,7 +372,8 @@
   "origin": "Incisive fossa of the mandible",
   "insertion": "Skin of the chin",
   "innervation": "Marginal mandibular branch of the facial nerve (CN VII)",
-  "action": "Raises and protrudes the lower lip; wrinkles the chin"
+  "action": "Raises and protrudes the lower lip; wrinkles the chin",
+  "blood": "Inferior labial and mental arteries"
  },
  "muscle.platysma": {
   "name": "Platysma",
@@ -345,7 +383,8 @@
   "origin": "Fascia over the upper pectoralis major and deltoid",
   "insertion": "Inferior border of the mandible, skin of the lower face and angle of the mouth",
   "innervation": "Cervical branch of the facial nerve (CN VII)",
-  "action": "Tenses the skin of the neck; helps depress the mandible and corner of the mouth"
+  "action": "Tenses the skin of the neck; helps depress the mandible and corner of the mouth",
+  "blood": "Submental and suprascapular arteries"
  },
  "muscle.temporalis": {
   "name": "Temporalis",
@@ -355,7 +394,9 @@
   "origin": "Floor of the temporal fossa and deep temporal fascia",
   "insertion": "Coronoid process and anterior border of the ramus of the mandible",
   "innervation": "Deep temporal nerves (mandibular nerve, V3)",
-  "action": "Elevates the mandible; posterior fibres retract it"
+  "action": "Elevates the mandible; posterior fibres retract it",
+  "blood": "Deep temporal arteries (maxillary) and middle temporal artery (superficial temporal)",
+  "clinical": "Can be felt contracting at the temple when you clench your teeth."
  },
  "muscle.masseter_superficial": {
   "name": "Masseter – superficial part",
@@ -365,7 +406,9 @@
   "origin": "Zygomatic process of maxilla and anterior two-thirds of the lower border of the zygomatic arch",
   "insertion": "Angle and lower lateral surface of the ramus of the mandible",
   "innervation": "Masseteric nerve (mandibular nerve, V3)",
-  "action": "Elevates the mandible (closes the jaw)"
+  "action": "Elevates the mandible (closes the jaw)",
+  "blood": "Masseteric artery (maxillary), transverse facial and facial arteries",
+  "clinical": "Easily felt at the angle of the jaw when you clench your teeth; it may enlarge in people who grind their teeth."
  },
  "muscle.masseter_deep": {
   "name": "Masseter – deep part",
@@ -375,7 +418,8 @@
   "origin": "Posterior third and deep surface of the zygomatic arch",
   "insertion": "Upper lateral surface of the ramus and coronoid process",
   "innervation": "Masseteric nerve (mandibular nerve, V3)",
-  "action": "Elevates and helps retract the mandible"
+  "action": "Elevates and helps retract the mandible",
+  "blood": "Masseteric artery (maxillary), transverse facial and facial arteries"
  },
  "muscle.medial_pterygoid": {
   "name": "Medial pterygoid",
@@ -385,7 +429,8 @@
   "origin": "Medial surface of the lateral pterygoid plate; maxillary tuberosity",
   "insertion": "Medial surface of the ramus near the angle of the mandible",
   "innervation": "Nerve to medial pterygoid (mandibular nerve, V3)",
-  "action": "Elevates and protrudes the mandible; side-to-side grinding"
+  "action": "Elevates and protrudes the mandible; side-to-side grinding",
+  "blood": "Pterygoid branches of the maxillary artery"
  },
  "muscle.lateral_pterygoid_superior": {
   "name": "Lateral pterygoid – superior head",
@@ -395,7 +440,8 @@
   "origin": "Infratemporal surface of the greater wing of the sphenoid",
   "insertion": "Capsule and articular disc of the temporomandibular joint, and neck of the mandible",
   "innervation": "Nerve to lateral pterygoid (mandibular nerve, V3)",
-  "action": "Stabilises the disc and condyle, especially during closing"
+  "action": "Stabilises the disc and condyle, especially during closing",
+  "blood": "Pterygoid branches of the maxillary artery"
  },
  "muscle.lateral_pterygoid_inferior": {
   "name": "Lateral pterygoid – inferior head",
@@ -405,7 +451,9 @@
   "origin": "Lateral surface of the lateral pterygoid plate",
   "insertion": "Pterygoid fovea on the neck of the mandible",
   "innervation": "Nerve to lateral pterygoid (mandibular nerve, V3)",
-  "action": "Protrudes the mandible and opens the jaw; side-to-side movement"
+  "action": "Protrudes the mandible and opens the jaw; side-to-side movement",
+  "blood": "Pterygoid branches of the maxillary artery",
+  "clinical": "The main jaw-opening muscle of mastication; the others close the jaw."
  },
  "muscle.sternocleidomastoid": {
   "name": "Sternocleidomastoid",
@@ -415,7 +463,9 @@
   "origin": "Manubrium of sternum (sternal head) and medial third of clavicle (clavicular head)",
   "insertion": "Mastoid process and lateral half of the superior nuchal line",
   "innervation": "Accessory nerve (CN XI)",
-  "action": "One side: tilts the head to the same side and turns the face to the opposite side. Both sides: flex the neck"
+  "action": "One side: tilts the head to the same side and turns the face to the opposite side. Both sides: flex the neck",
+  "blood": "Occipital and superior thyroid arteries",
+  "clinical": "A shortened sternocleidomastoid in infants causes congenital muscular torticollis (head tilt)."
  },
  "muscle.digastric_anterior": {
   "name": "Digastric – anterior belly",
@@ -425,7 +475,8 @@
   "origin": "Digastric fossa of the mandible",
   "insertion": "Intermediate tendon, attached to the hyoid bone",
   "innervation": "Nerve to mylohyoid (mandibular nerve, V3)",
-  "action": "Depresses the mandible; elevates the hyoid"
+  "action": "Depresses the mandible; elevates the hyoid",
+  "blood": "Submental artery"
  },
  "muscle.digastric_posterior": {
   "name": "Digastric – posterior belly",
@@ -435,7 +486,8 @@
   "origin": "Mastoid notch of the temporal bone",
   "insertion": "Intermediate tendon, attached to the hyoid bone",
   "innervation": "Facial nerve (CN VII)",
-  "action": "Elevates and retracts the hyoid; assists jaw opening"
+  "action": "Elevates and retracts the hyoid; assists jaw opening",
+  "blood": "Occipital and posterior auricular arteries"
  },
  "muscle.mylohyoid": {
   "name": "Mylohyoid",
@@ -445,7 +497,8 @@
   "origin": "Mylohyoid line of the mandible",
   "insertion": "Midline raphe and body of the hyoid bone",
   "innervation": "Nerve to mylohyoid (mandibular nerve, V3)",
-  "action": "Elevates the hyoid and floor of the mouth (swallowing, speaking)"
+  "action": "Elevates the hyoid and floor of the mouth (swallowing, speaking)",
+  "blood": "Mylohyoid branch of the inferior alveolar artery and submental artery"
  },
  "muscle.stylohyoid": {
   "name": "Stylohyoid",
@@ -465,7 +518,9 @@
   "origin": "Lesser wing of the sphenoid, above the optic canal",
   "insertion": "Skin and tarsal plate of the upper eyelid",
   "innervation": "Oculomotor nerve (CN III); its smooth-muscle part (superior tarsal) is sympathetic",
-  "action": "Raises the upper eyelid"
+  "action": "Raises the upper eyelid",
+  "blood": "Muscular branches of the ophthalmic artery",
+  "clinical": "Oculomotor nerve palsy causes complete ptosis (drooping lid); Horner syndrome causes only partial ptosis via the smooth-muscle part."
  },
  "muscle.superior_rectus": {
   "name": "Superior rectus",
@@ -475,7 +530,8 @@
   "origin": "Common tendinous ring",
   "insertion": "Superior sclera, in front of the equator",
   "innervation": "Oculomotor nerve (CN III)",
-  "action": "Elevates the eye; also adducts and intorts it"
+  "action": "Elevates the eye; also adducts and intorts it",
+  "blood": "Muscular branches of the ophthalmic artery"
  },
  "muscle.inferior_rectus": {
   "name": "Inferior rectus",
@@ -485,7 +541,8 @@
   "origin": "Common tendinous ring",
   "insertion": "Inferior sclera, in front of the equator",
   "innervation": "Oculomotor nerve (CN III)",
-  "action": "Depresses the eye; also adducts and extorts it"
+  "action": "Depresses the eye; also adducts and extorts it",
+  "blood": "Ophthalmic and infra-orbital arteries"
  },
  "muscle.medial_rectus": {
   "name": "Medial rectus",
@@ -495,7 +552,8 @@
   "origin": "Common tendinous ring",
   "insertion": "Medial sclera",
   "innervation": "Oculomotor nerve (CN III)",
-  "action": "Adducts the eye"
+  "action": "Adducts the eye",
+  "blood": "Muscular branches of the ophthalmic artery"
  },
  "muscle.lateral_rectus": {
   "name": "Lateral rectus",
@@ -505,7 +563,9 @@
   "origin": "Common tendinous ring",
   "insertion": "Lateral sclera",
   "innervation": "Abducens nerve (CN VI)",
-  "action": "Abducts the eye"
+  "action": "Abducts the eye",
+  "blood": "Ophthalmic and lacrimal arteries",
+  "clinical": "Abducens nerve palsy stops the eye turning outwards, giving horizontal double vision."
  },
  "muscle.superior_oblique": {
   "name": "Superior oblique",
@@ -515,7 +575,9 @@
   "origin": "Body of the sphenoid, above and medial to the optic canal",
   "insertion": "Posterosuperolateral sclera, via the trochlea",
   "innervation": "Trochlear nerve (CN IV)",
-  "action": "Intorts, depresses and abducts the eye (depression is greatest when the eye is adducted)"
+  "action": "Intorts, depresses and abducts the eye (depression is greatest when the eye is adducted)",
+  "blood": "Muscular branches of the ophthalmic artery",
+  "clinical": "Trochlear nerve palsy gives vertical double vision, worst when looking down (e.g. going downstairs)."
  },
  "muscle.inferior_oblique": {
   "name": "Inferior oblique",
@@ -525,28 +587,33 @@
   "origin": "Orbital surface of the maxilla, in the floor of the orbit",
   "insertion": "Posteroinferolateral sclera",
   "innervation": "Oculomotor nerve (CN III)",
-  "action": "Extorts, elevates and abducts the eye (elevation is greatest when the eye is adducted)"
+  "action": "Extorts, elevates and abducts the eye (elevation is greatest when the eye is adducted)",
+  "blood": "Ophthalmic and infra-orbital arteries"
  },
  "nerve.facial_nerve": {
-  "name": "Facial nerve (CN VII)",
+  "name": "Facial nerve (CN VII) – root & trunk",
   "latin": "Nervus facialis",
   "group": "Cranial nerve",
-  "summary": "Leaves the skull at the stylomastoid foramen, passes through the parotid gland and fans out into temporal, zygomatic, buccal, marginal mandibular and cervical branches to the muscles of facial expression. Also carries taste from the anterior two-thirds of the tongue and secretomotor fibres to the lacrimal, submandibular and sublingual glands.",
-  "fibres": "Motor, sensory (taste), parasympathetic"
+  "summary": "Leaves the brainstem, runs through the internal acoustic meatus and the facial canal of the temporal bone, exits at the stylomastoid foramen and enters the parotid gland, where it divides (the parotid plexus, or \"pes anserinus\") into five branches: temporal, zygomatic, buccal, marginal mandibular and cervical. Also carries taste and secretomotor fibres. In this model the piece includes the intracranial and intratemporal course plus two short twigs that are not labelled.",
+  "fibres": "Motor, sensory (taste), parasympathetic",
+  "supplies": "Via its branches: muscles of facial expression, platysma, posterior belly of digastric, stylohyoid, stapedius",
+  "clinical": "Bell's palsy (idiopathic facial nerve palsy) weakens the whole of one side of the face, including the forehead; a stroke usually spares the forehead because of bilateral cortical input. The nerve runs through the parotid gland, between its superficial and deep parts, so it is at risk in parotid surgery."
  },
  "nerve.chorda_tympani": {
   "name": "Chorda tympani",
   "latin": "Chorda tympani",
   "group": "Branch of CN VII",
   "summary": "Crosses the middle ear next to the eardrum and joins the lingual nerve. Carries taste from the anterior two-thirds of the tongue and secretomotor fibres to the submandibular and sublingual glands.",
-  "fibres": "Sensory (taste), parasympathetic"
+  "fibres": "Sensory (taste), parasympathetic",
+  "clinical": "Can be stretched or cut during middle-ear surgery, altering taste on the front of the tongue."
  },
  "nerve.trigeminal_nerve": {
   "name": "Trigeminal nerve (CN V)",
   "latin": "Nervus trigeminus",
   "group": "Cranial nerve",
   "summary": "The main sensory nerve of the face, and motor to the muscles of mastication. Divides at the trigeminal ganglion into ophthalmic (V1), maxillary (V2) and mandibular (V3) nerves.",
-  "fibres": "Sensory and motor"
+  "fibres": "Sensory and motor",
+  "clinical": "Trigeminal neuralgia causes brief, severe electric-shock-like facial pain in its territory."
  },
  "nerve.trigeminal_sensory_root": {
   "name": "Sensory root of trigeminal nerve",
@@ -567,14 +634,16 @@
   "latin": "Nervus ophthalmicus",
   "group": "Trigeminal nerve",
   "summary": "Enters the orbit through the superior orbital fissure as the frontal, lacrimal and nasociliary nerves. Supplies the forehead, upper eyelid, cornea and dorsum of the nose.",
-  "fibres": "Sensory"
+  "fibres": "Sensory",
+  "clinical": "Shingles in this division (herpes zoster ophthalmicus) can threaten the eye."
  },
  "nerve.maxillary_nerve": {
   "name": "Maxillary nerve (V2)",
   "latin": "Nervus maxillaris",
   "group": "Trigeminal nerve",
   "summary": "Leaves the skull through the foramen rotundum and continues as the infra-orbital nerve. Supplies the lower eyelid, cheek, upper lip, upper teeth, palate and nasal cavity.",
-  "fibres": "Sensory"
+  "fibres": "Sensory",
+  "clinical": "Orbital floor fractures can damage its infra-orbital continuation, numbing the cheek and upper lip."
  },
  "nerve.mandibular_nerve_anterior": {
   "name": "Mandibular nerve (V3) – anterior division",
@@ -602,21 +671,24 @@
   "latin": "Nervus lingualis",
   "group": "Mandibular nerve (V3)",
   "summary": "General sensation from the anterior two-thirds of the tongue, floor of the mouth and lingual gums. Carries chorda tympani fibres.",
-  "fibres": "Sensory (+ chorda tympani fibres)"
+  "fibres": "Sensory (+ chorda tympani fibres)",
+  "clinical": "Lies close to the lower third molar and can be injured during its extraction, numbing the tongue."
  },
  "nerve.inferior_alveolar_nerve": {
   "name": "Inferior alveolar nerve",
   "latin": "Nervus alveolaris inferior",
   "group": "Mandibular nerve (V3)",
   "summary": "Enters the mandibular foramen and runs in the mandibular canal to supply the lower teeth. Anaesthetised in the dental \"inferior alveolar nerve block\".",
-  "fibres": "Sensory (gives off the motor nerve to mylohyoid)"
+  "fibres": "Sensory (gives off the motor nerve to mylohyoid)",
+  "clinical": "Blocked with local anaesthetic for lower dental work; can be injured during lower third-molar removal."
  },
  "nerve.mental_nerve": {
   "name": "Mental nerve",
   "latin": "Nervus mentalis",
   "group": "Mandibular nerve (V3)",
   "summary": "Terminal branch of the inferior alveolar nerve; emerges from the mental foramen to supply the skin of the chin and the lower lip.",
-  "fibres": "Sensory"
+  "fibres": "Sensory",
+  "clinical": "Damage numbs the lower lip and chin."
  },
  "nerve.nerve_to_mylohyoid": {
   "name": "Nerve to mylohyoid",
@@ -630,14 +702,16 @@
   "latin": "Nervus opticus",
   "group": "Cranial nerve",
   "summary": "Carries visual information from the retina through the optic canal to the optic chiasm.",
-  "fibres": "Special sensory (vision)"
+  "fibres": "Special sensory (vision)",
+  "clinical": "Swelling of the optic disc (papilloedema) is a sign of raised intracranial pressure."
  },
  "nerve.oculomotor_nerve": {
   "name": "Oculomotor nerve (CN III)",
   "latin": "Nervus oculomotorius",
   "group": "Cranial nerve",
   "summary": "Supplies the superior, inferior and medial recti, inferior oblique and levator palpebrae superioris; its parasympathetic fibres constrict the pupil and focus the lens.",
-  "fibres": "Motor, parasympathetic"
+  "fibres": "Motor, parasympathetic",
+  "clinical": "A palsy gives a \"down and out\" eye, ptosis and often a dilated pupil (e.g. from an aneurysm pressing on it)."
  },
  "nerve.trochlear_nerve": {
   "name": "Trochlear nerve (CN IV)",
@@ -651,14 +725,16 @@
   "latin": "Nervus abducens",
   "group": "Cranial nerve",
   "summary": "Supplies the lateral rectus muscle, which turns the eye outwards.",
-  "fibres": "Motor"
+  "fibres": "Motor",
+  "clinical": "Its long intracranial course makes it vulnerable to raised intracranial pressure."
  },
  "nerve.hypoglossal_nerve": {
   "name": "Hypoglossal nerve (CN XII)",
   "latin": "Nervus hypoglossus",
   "group": "Cranial nerve",
   "summary": "Motor to the intrinsic and most extrinsic muscles of the tongue (all except palatoglossus).",
-  "fibres": "Motor"
+  "fibres": "Motor",
+  "clinical": "A lesion makes the protruded tongue deviate towards the weak side."
  },
  "vessel.external_carotid_artery": {
   "name": "External carotid artery",
@@ -670,13 +746,15 @@
   "name": "Internal carotid artery",
   "latin": "Arteria carotis interna",
   "group": "Artery",
-  "summary": "Gives no branches in the neck. Enters the skull through the carotid canal to supply the brain, and the orbit via the ophthalmic artery."
+  "summary": "Gives no branches in the neck. Enters the skull through the carotid canal to supply the brain, and the orbit via the ophthalmic artery.",
+  "clinical": "Narrowing at its origin (carotid stenosis) is an important cause of stroke."
  },
  "vessel.facial_artery": {
   "name": "Facial artery",
   "latin": "Arteria facialis",
   "group": "Artery",
-  "summary": "Branch of the external carotid. Hooks over the mandible at the front of the masseter (where its pulse can be felt) and winds towards the medial corner of the eye."
+  "summary": "Branch of the external carotid. Hooks over the mandible at the front of the masseter (where its pulse can be felt) and winds towards the medial corner of the eye.",
+  "clinical": "Its pulse can be felt where it crosses the lower border of the mandible."
  },
  "vessel.angular_artery": {
   "name": "Angular artery",
@@ -706,7 +784,8 @@
   "name": "Superficial temporal artery",
   "latin": "Arteria temporalis superficialis",
   "group": "Artery",
-  "summary": "Terminal branch of the external carotid. Ascends in front of the ear, where its pulse can be felt, and supplies much of the scalp."
+  "summary": "Terminal branch of the external carotid. Ascends in front of the ear, where its pulse can be felt, and supplies much of the scalp.",
+  "clinical": "Biopsied to diagnose giant cell (temporal) arteritis."
  },
  "vessel.superficial_temporal_artery_frontal_branch": {
   "name": "Frontal branch of superficial temporal artery",
@@ -724,7 +803,8 @@
   "name": "Maxillary artery",
   "latin": "Arteria maxillaris",
   "group": "Artery",
-  "summary": "Larger terminal branch of the external carotid. Passes behind the neck of the mandible to supply the jaws, teeth, muscles of mastication, nasal cavity, palate and dura (via the middle meningeal artery)."
+  "summary": "Larger terminal branch of the external carotid. Passes behind the neck of the mandible to supply the jaws, teeth, muscles of mastication, nasal cavity, palate and dura (via the middle meningeal artery).",
+  "clinical": "Its sphenopalatine branch is the usual source of severe posterior nosebleeds."
  },
  "vessel.inferior_alveolar_artery": {
   "name": "Inferior alveolar artery",
@@ -814,7 +894,8 @@
   "name": "Internal jugular vein",
   "latin": "Vena jugularis interna",
   "group": "Vein",
-  "summary": "Begins at the jugular foramen and runs in the carotid sheath. Drains the brain, face and neck, then joins the subclavian vein to form the brachiocephalic vein."
+  "summary": "Begins at the jugular foramen and runs in the carotid sheath. Drains the brain, face and neck, then joins the subclavian vein to form the brachiocephalic vein.",
+  "clinical": "Common site for central venous catheters."
  },
  "vessel.external_jugular_vein": {
   "name": "External jugular vein",
@@ -838,13 +919,15 @@
   "name": "Lacrimal gland",
   "latin": "Glandula lacrimalis",
   "group": "Gland",
-  "summary": "Produces tears; sits in the upper outer part of the orbit. Its secretomotor supply comes from the facial nerve via the pterygopalatine ganglion."
+  "summary": "Produces tears; sits in the upper outer part of the orbit. Its secretomotor supply comes from the facial nerve via the pterygopalatine ganglion.",
+  "clinical": "Reduced tear secretion on the affected side can help localise a facial nerve lesion proximal to the geniculate ganglion."
  },
  "organ.parotid_gland": {
   "name": "Parotid gland",
   "latin": "Glandula parotidea",
   "group": "Gland",
-  "summary": "The largest salivary gland, in front of and below the ear (model includes the accessory parotid). The facial nerve passes through it but does not supply it; its secretomotor fibres come from the glossopharyngeal nerve."
+  "summary": "The largest salivary gland, in front of and below the ear (model includes the accessory parotid). The facial nerve passes through it but does not supply it; its secretomotor fibres come from the glossopharyngeal nerve.",
+  "clinical": "Swells in mumps. Most parotid tumours are benign (pleomorphic adenoma), but surgery must protect the facial nerve running through the gland."
  },
  "organ.parotid_duct": {
   "name": "Parotid duct",
@@ -983,5 +1066,278 @@
   "latin": "Regio cervicalis posterior",
   "group": "Surface region",
   "summary": "Skin of the back of the neck (nuchal region)."
+ },
+ "nerve.facial_temporal_branches": {
+  "name": "Temporal branches of facial nerve",
+  "latin": "Rami temporales nervi facialis",
+  "group": "Facial nerve branch",
+  "summary": "Leave the upper border of the parotid gland and cross the zygomatic arch to the temple and forehead.",
+  "supplies": "Frontalis, upper orbicularis oculi, corrugator supercilii, anterior and superior auricular muscles",
+  "clinical": "They lie superficially over the zygomatic arch, so they can be injured in arch fractures or temple/facelift surgery, causing an inability to raise the eyebrow on that side.",
+  "fibres": "Motor"
+ },
+ "nerve.facial_zygomatic_branches": {
+  "name": "Zygomatic branches of facial nerve",
+  "latin": "Rami zygomatici nervi facialis",
+  "group": "Facial nerve branch",
+  "summary": "Run forwards across the zygomatic bone towards the lateral angle of the eye and the infra-orbital region.",
+  "supplies": "Orbicularis oculi (especially its lower part), zygomaticus major and minor; share supply of the upper-lip elevators with the buccal branches",
+  "clinical": "Injury weakens eye closure, which can leave the cornea exposed and dry.",
+  "fibres": "Motor"
+ },
+ "nerve.facial_buccal_branches": {
+  "name": "Buccal branches of facial nerve",
+  "latin": "Rami buccales nervi facialis",
+  "group": "Facial nerve branch",
+  "summary": "Run forwards across the masseter, near the parotid duct, to the cheek, upper lip and nose. They form many interconnections with the zygomatic branches.",
+  "supplies": "Buccinator, orbicularis oris, levator labii superioris (and alaeque nasi), levator anguli oris, risorius, nasalis, zygomaticus muscles",
+  "clinical": "Because of their many cross-connections, an isolated buccal branch injury often recovers or is compensated. Buccinator weakness lets food collect in the cheek.",
+  "fibres": "Motor"
+ },
+ "nerve.facial_marginal_mandibular_branch": {
+  "name": "Marginal mandibular branch of facial nerve",
+  "latin": "Ramus marginalis mandibularis nervi facialis",
+  "group": "Facial nerve branch",
+  "summary": "Runs forwards along the lower border of the mandible, deep to platysma, crossing superficial to the facial artery and vein.",
+  "supplies": "Depressor anguli oris, depressor labii inferioris, mentalis, lower orbicularis oris",
+  "clinical": "At risk in submandibular gland surgery and upper neck incisions, so incisions are placed well below the jaw. Injury gives an asymmetric smile: the lower lip on that side cannot be pulled down.",
+  "fibres": "Motor"
+ },
+ "nerve.facial_cervical_branch": {
+  "name": "Cervical branch of facial nerve",
+  "latin": "Ramus colli nervi facialis",
+  "group": "Facial nerve branch",
+  "summary": "Leaves the lower pole of the parotid gland and descends into the neck beneath platysma.",
+  "supplies": "Platysma",
+  "clinical": "Injury is usually minor, but because platysma helps pull down the corner of the mouth it can mimic marginal mandibular weakness (\"pseudo-paralysis\").",
+  "fibres": "Motor"
+ },
+ "organ.frontal_sinus": {
+  "name": "Frontal sinus",
+  "latin": "Sinus frontalis",
+  "group": "Paranasal sinus",
+  "summary": "Air space in the frontal bone above the orbits; drains into the middle meatus of the nose. Absent at birth, it develops during childhood.",
+  "clinical": "Can be involved in sinusitis, causing pain over the forehead."
+ },
+ "organ.sphenoidal_sinus": {
+  "name": "Sphenoidal sinus",
+  "latin": "Sinus sphenoidalis",
+  "group": "Paranasal sinus",
+  "summary": "Air space in the body of the sphenoid bone, directly below the pituitary fossa; drains into the sphenoethmoidal recess.",
+  "clinical": "Surgeons can reach the pituitary gland through it (transsphenoidal surgery)."
+ },
+ "organ.ethmoidal_cells": {
+  "name": "Ethmoidal cells",
+  "latin": "Cellulae ethmoidales",
+  "group": "Paranasal sinus",
+  "summary": "Groups of small air cells in the ethmoid bone between the nose and the orbit (anterior, middle and posterior groups).",
+  "clinical": "Only a paper-thin plate of bone separates them from the orbit, so ethmoid sinusitis can spread to cause orbital cellulitis."
+ },
+ "organ.tongue": {
+  "name": "Tongue",
+  "latin": "Lingua",
+  "group": "Mouth",
+  "summary": "Muscular organ for taste, chewing, swallowing and speech.",
+  "nerveSupply": "Motor: hypoglossal nerve (CN XII), except palatoglossus (vagus). Anterior two-thirds: general sensation via the lingual nerve (V3), taste via the chorda tympani (CN VII). Posterior third: glossopharyngeal nerve (CN IX)",
+  "blood": "Lingual artery",
+  "clinical": "With a hypoglossal nerve lesion the protruded tongue deviates towards the weak side."
+ },
+ "organ.sublingual_gland": {
+  "name": "Sublingual gland",
+  "latin": "Glandula sublingualis",
+  "group": "Gland",
+  "summary": "The smallest major salivary gland, under the mucosa of the floor of the mouth; opens through many small ducts on the sublingual fold. Secretomotor supply via the chorda tympani and submandibular ganglion."
+ },
+ "organ.lacrimal_sac": {
+  "name": "Lacrimal sac",
+  "latin": "Saccus lacrimalis",
+  "group": "Lacrimal apparatus",
+  "summary": "Upper dilated end of the tear-drainage system, in the lacrimal fossa at the medial corner of the orbit. Receives tears from the canaliculi.",
+  "clinical": "Infection of the sac (dacryocystitis) causes a tender swelling beside the nose."
+ },
+ "organ.nasolacrimal_duct": {
+  "name": "Nasolacrimal duct",
+  "latin": "Ductus nasolacrimalis",
+  "group": "Lacrimal apparatus",
+  "summary": "Carries tears from the lacrimal sac to the inferior meatus of the nose, which is why the nose runs when you cry."
+ },
+ "muscle.geniohyoid": {
+  "name": "Geniohyoid",
+  "latin": "Musculus geniohyoideus",
+  "group": "Neck",
+  "summary": "Narrow suprahyoid muscle above mylohyoid.",
+  "origin": "Inferior mental spine of the mandible",
+  "insertion": "Body of the hyoid bone",
+  "innervation": "C1 fibres carried by the hypoglossal nerve",
+  "action": "Pulls the hyoid forwards and up; helps depress the mandible"
+ },
+ "muscle.genioglossus": {
+  "name": "Genioglossus",
+  "latin": "Musculus genioglossus",
+  "group": "Tongue",
+  "summary": "Fan-shaped extrinsic muscle forming the bulk of the tongue.",
+  "origin": "Superior mental spine of the mandible",
+  "insertion": "Dorsum of the tongue and body of the hyoid",
+  "innervation": "Hypoglossal nerve (CN XII)",
+  "action": "Protrudes the tongue",
+  "clinical": "With a hypoglossal nerve lesion the tongue deviates towards the weak side when protruded, because the healthy genioglossus pushes it across."
+ },
+ "muscle.hyoglossus": {
+  "name": "Hyoglossus",
+  "latin": "Musculus hyoglossus",
+  "group": "Tongue",
+  "summary": "Thin quadrilateral extrinsic tongue muscle.",
+  "origin": "Body and greater horn of the hyoid bone",
+  "insertion": "Side of the tongue",
+  "innervation": "Hypoglossal nerve (CN XII)",
+  "action": "Depresses and retracts the tongue"
+ },
+ "vessel.middle_meningeal_artery": {
+  "name": "Middle meningeal artery",
+  "latin": "Arteria meningea media",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery that enters the skull through the foramen spinosum to supply the dura and skull bones.",
+  "clinical": "Its anterior branch runs deep to the pterion, where the skull is thin; a blow there can tear it, causing an extradural haematoma."
+ },
+ "vessel.buccal_artery": {
+  "name": "Buccal artery",
+  "latin": "Arteria buccalis",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery that runs with the buccal nerve to the cheek and buccinator."
+ },
+ "vessel.anterior_deep_temporal_artery": {
+  "name": "Anterior deep temporal artery",
+  "latin": "Arteria temporalis profunda anterior",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery supplying the temporalis muscle."
+ },
+ "vessel.posterior_deep_temporal_artery": {
+  "name": "Posterior deep temporal artery",
+  "latin": "Arteria temporalis profunda posterior",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery supplying the temporalis muscle."
+ },
+ "vessel.descending_palatine_artery": {
+  "name": "Descending palatine artery",
+  "latin": "Arteria palatina descendens",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery that descends in the palatine canal and divides into the greater and lesser palatine arteries for the palate."
+ },
+ "vessel.posterior_superior_alveolar_artery": {
+  "name": "Posterior superior alveolar artery",
+  "latin": "Arteria alveolaris superior posterior",
+  "group": "Artery",
+  "summary": "Branch of the maxillary artery supplying the upper molar and premolar teeth, gums and maxillary sinus."
+ },
+ "vessel.mental_artery": {
+  "name": "Mental branch of inferior alveolar artery",
+  "latin": "Ramus mentalis arteriae alveolaris inferioris",
+  "group": "Artery",
+  "summary": "Leaves the mental foramen with the mental nerve to supply the chin and lower lip."
+ },
+ "vessel.lacrimal_artery": {
+  "name": "Lacrimal artery",
+  "latin": "Arteria lacrimalis",
+  "group": "Artery",
+  "summary": "Branch of the ophthalmic artery supplying the lacrimal gland and eyelids."
+ },
+ "vessel.ascending_pharyngeal_artery": {
+  "name": "Ascending pharyngeal artery",
+  "latin": "Arteria pharyngea ascendens",
+  "group": "Artery",
+  "summary": "Smallest branch of the external carotid; supplies the pharynx, prevertebral muscles, middle ear and meninges."
+ },
+ "vessel.vertebral_artery": {
+  "name": "Vertebral artery",
+  "latin": "Arteria vertebralis",
+  "group": "Artery",
+  "summary": "Branch of the subclavian artery that climbs through the transverse foramina of the cervical vertebrae, enters the skull through the foramen magnum and joins its partner to form the basilar artery."
+ },
+ "vessel.lingual_vein": {
+  "name": "Lingual vein",
+  "latin": "Vena lingualis",
+  "group": "Vein",
+  "summary": "Drains the tongue into the internal jugular vein."
+ },
+ "vessel.maxillary_veins": {
+  "name": "Maxillary veins",
+  "latin": "Venae maxillares",
+  "group": "Vein",
+  "summary": "Short veins from the pterygoid plexus that join the superficial temporal veins to form the retromandibular vein."
+ },
+ "vessel.superior_ophthalmic_vein": {
+  "name": "Superior ophthalmic vein",
+  "latin": "Vena ophthalmica superior",
+  "group": "Vein",
+  "summary": "Drains the orbit through the superior orbital fissure into the cavernous sinus; connects with the angular vein at the front."
+ },
+ "vessel.inferior_ophthalmic_vein": {
+  "name": "Inferior ophthalmic vein",
+  "latin": "Vena ophthalmica inferior",
+  "group": "Vein",
+  "summary": "Drains the floor of the orbit to the cavernous sinus and the pterygoid plexus."
+ },
+ "vessel.transverse_sinus": {
+  "name": "Transverse sinus",
+  "latin": "Sinus transversus",
+  "group": "Dural venous sinus",
+  "summary": "Runs from the confluence of sinuses along the attachment of the tentorium to become the sigmoid sinus."
+ },
+ "vessel.sigmoid_sinus": {
+  "name": "Sigmoid sinus",
+  "latin": "Sinus sigmoideus",
+  "group": "Dural venous sinus",
+  "summary": "S-shaped sinus grooving the mastoid part of the temporal bone; continues as the internal jugular vein at the jugular foramen.",
+  "clinical": "Because it lies next to the mastoid air cells, untreated mastoiditis can spread to it and cause sinus thrombosis."
+ },
+ "vessel.cavernous_sinus": {
+  "name": "Cavernous sinus",
+  "latin": "Sinus cavernosus",
+  "group": "Dural venous sinus",
+  "summary": "Venous space on each side of the pituitary fossa. The internal carotid artery and abducens nerve run through it; the oculomotor, trochlear, ophthalmic and maxillary nerves lie in its lateral wall.",
+  "clinical": "Facial infections can spread here through the ophthalmic veins (cavernous sinus thrombosis), affecting the eye-movement nerves."
+ },
+ "vessel.superior_sagittal_sinus": {
+  "name": "Superior sagittal sinus",
+  "latin": "Sinus sagittalis superior",
+  "group": "Dural venous sinus",
+  "summary": "Runs along the upper margin of the falx cerebri; arachnoid granulations return cerebrospinal fluid into it. Drains to the confluence of sinuses."
+ },
+ "vessel.straight_sinus": {
+  "name": "Straight sinus",
+  "latin": "Sinus rectus",
+  "group": "Dural venous sinus",
+  "summary": "Lies where the falx cerebri meets the tentorium; receives the inferior sagittal sinus and great cerebral vein and drains to the confluence of sinuses."
+ },
+ "brain.cerebral_hemisphere": {
+  "name": "Cerebral hemisphere",
+  "latin": "Hemispherium cerebri",
+  "group": "Brain",
+  "summary": "Frontal, parietal, temporal and occipital lobes with the insula and limbic lobe. Each hemisphere mainly controls and senses the opposite side of the body. In this model the gyri are merged into one piece per side."
+ },
+ "brain.cerebellum": {
+  "name": "Cerebellum",
+  "latin": "Cerebellum",
+  "group": "Brain",
+  "summary": "Coordinates movement, balance and posture, and contributes to motor learning.",
+  "clinical": "Damage causes clumsiness (ataxia) on the same side as the lesion."
+ },
+ "brain.brainstem": {
+  "name": "Brainstem",
+  "latin": "Truncus encephali",
+  "group": "Brain",
+  "summary": "Midbrain, pons and medulla oblongata. Contains the nuclei of cranial nerves III–XII (the facial nerve nucleus is in the pons) and centres that control breathing and heart rate."
+ },
+ "brain.corpus_callosum": {
+  "name": "Corpus callosum",
+  "latin": "Corpus callosum",
+  "group": "Brain",
+  "summary": "The largest bundle of fibres connecting the two cerebral hemispheres."
+ },
+ "brain.falx_cerebri": {
+  "name": "Falx cerebri",
+  "latin": "Falx cerebri",
+  "group": "Brain",
+  "summary": "Sickle-shaped fold of dura mater between the cerebral hemispheres; the superior and inferior sagittal sinuses run along its edges."
  }
 }
